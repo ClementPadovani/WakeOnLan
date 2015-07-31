@@ -17,11 +17,8 @@
 
 @implementation WOLViewController
 
-
 - (IBAction) performSendWOLPacket: (NSButton *) sender
 {
-	NSLog(@"do send WOL packet");
-	
 	NSString *lacieMACAddress = @"00:D0:4B:8D:A3:38";
 	
 	//	NSString *port = @"4343";
@@ -33,10 +30,6 @@
 	if (send_wol_packet(networkBroadcastAddress, macAddress))
 	{
 		NSLog(@"error sending WOL packet");
-	}
-	else
-	{
-		NSLog(@"sent WOL packet");
 	}
 }
 
