@@ -17,8 +17,9 @@
 @implementation WOLViewController
 
 
-- (IBAction)performSendWOLPacket:(NSButton *)sender {
+- (IBAction) performSendWOLPacket: (NSButton *) sender
+{
+	
 }
-
 
 @end
