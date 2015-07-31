@@ -177,6 +177,9 @@
                             </menuItem>
                         </items>
                     </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="sFk-1R-Kqq"/>
+                    </connections>
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="WOLAppDelegate"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -220,10 +223,14 @@
                                     <action selector="performSendWOLPacket:" target="XfG-lQ-9wD" id="0fp-bL-z1c"/>
                                 </connections>
                             </button>
-                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbP-gT-kkQ">
-                                <rect key="frame" x="192" y="169" width="96" height="22"/>
+                            <textField verticalHuggingPriority="750" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbP-gT-kkQ">
+                                <rect key="frame" x="190" y="169" width="100" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7KI-l6-lP8"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ld9-oA-ZOe"/>
+                                </constraints>
                                 <animations/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="MAC Address" drawsBackground="YES" id="50D-CH-3Tn">
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" alignment="center" placeholderString="MAC Address" drawsBackground="YES" usesSingleLineMode="YES" id="50D-CH-3Tn">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -234,7 +241,11 @@
                             </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="rbP-gT-kkQ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="1IJ-ug-mbB"/>
+                            <constraint firstItem="PDa-fY-yuf" firstAttribute="top" secondItem="rbP-gT-kkQ" secondAttribute="bottom" constant="23" id="855-qg-ohC"/>
+                            <constraint firstItem="rbP-gT-kkQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="50" id="HjO-P8-mnJ"/>
                             <constraint firstItem="PDa-fY-yuf" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="Tnw-VT-3Bi"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rbP-gT-kkQ" secondAttribute="trailing" constant="50" id="VVf-SC-co8"/>
                             <constraint firstItem="PDa-fY-yuf" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="jDQ-4T-tlv"/>
                         </constraints>
                         <animations/>

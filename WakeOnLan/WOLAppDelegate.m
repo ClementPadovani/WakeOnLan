@@ -10,4 +10,14 @@
 
 @implementation WOLAppDelegate
 
+- (void) applicationDidFinishLaunching:(nonnull NSNotification *)notification
+{
+
+}
+
+- (BOOL) applicationShouldTerminateAfterLastWindowClosed: (nonnull NSApplication *) sender
+{
+	return YES;
+}
+
 @end

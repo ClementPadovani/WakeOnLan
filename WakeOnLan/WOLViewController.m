@@ -8,15 +8,57 @@
 
 #import "WOLViewController.h"
 #import "WOLwol.h"
+#import "WOLMACAddressFormatter.h"
+#import "WOLTextField.h"
 
 @interface WOLViewController () <NSTextFieldDelegate>
 
 @property (weak) IBOutlet NSButton *sendWOLPacketButton;
-@property (weak) IBOutlet NSTextField *macAddressTextField;
+@property (strong) IBOutlet NSTextField *macAddressTextField;
+
+@property (strong) WOLMACAddressFormatter *macAddressFormatter;
 
 @end
 
 @implementation WOLViewController
+
+- (void) viewDidLoad
+{
+	[super viewDidLoad];
+	
+	[[self macAddressTextField] setAllowsEditingTextAttributes: NO];
+	
+	NSFont *font = [NSFont fontWithName: @"Monaco" size: [NSFont systemFontSize]];
+	
+	[[self macAddressTextField] setFont: font];
+	
+	WOLMACAddressFormatter *macAddressFormatter = [[WOLMACAddressFormatter alloc] init];
+
+	[self setMacAddressFormatter: macAddressFormatter];
+	
+	[[self macAddressTextField] setFormatter: [self macAddressFormatter]];
+	
+//	[[NSNotificationCenter defaultCenter] addObserver: self
+//									 selector: @selector(textFieldDidChange:)
+//										name: NSControlTextDidChangeNotification
+//									   object: [self macAddressTextField]];
+	
+//	[[NSNotificationCenter defaultCenter] addObserverForName: nil
+//											object: [self macAddressTextField]
+//											 queue: [NSOperationQueue mainQueue]
+//										 usingBlock: ^(NSNotification * _Nonnull note) {
+//											
+//											 NSLog(@"notification: %@", note);
+//											 
+//										 }];
+}
+
+- (void) textFieldDidChange: (NSNotification *) notification
+{
+	NSLog(@"did change");
+	
+//	[[self macAddressTextField] invalidateIntrinsicContentSize];
+}
 
 - (IBAction) performSendWOLPacket: (NSButton *) sender
 {

@@ -1,5 +1,5 @@
 //
-//  WOLAppDelegate.h
+//  WOLTextField.h
 //  WakeOnLan
 //
 //  Created by Clément Padovani on 7/31/15.
@@ -8,6 +8,8 @@
 
 @import Cocoa;
 
-@interface WOLAppDelegate : NSResponder <NSApplicationDelegate>
+@interface WOLTextField : NSTextField
+
+- (NSSize) intrinsicContentSize;
 
 @end

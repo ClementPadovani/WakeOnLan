@@ -10,5 +10,6 @@
 
 int main(int argc, const char * argv[])
 {
+//	[NSApplication sharedApplication];
 	return NSApplicationMain(argc, argv);
 }
