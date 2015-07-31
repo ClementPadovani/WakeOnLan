@@ -10,13 +10,15 @@
 
 @interface WOLViewController ()
 
+@property (weak) IBOutlet NSButton *sendWOLPacketButton;
+
 @end
 
 @implementation WOLViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do view setup here.
+
+- (IBAction)performSendWOLPacket:(NSButton *)sender {
 }
+
 
 @end
