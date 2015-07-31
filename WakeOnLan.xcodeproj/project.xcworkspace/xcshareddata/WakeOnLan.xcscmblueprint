@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3A988CE430A4D895BA575CADD65F4120C8976370",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3A988CE430A4D895BA575CADD65F4120C8976370" : 0,
+    "AB378DA4CB780B63B999A285D2B91A28BCA6A3B9" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "D336E8C7-0A7C-47C3-92B5-3ED312F476A9",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3A988CE430A4D895BA575CADD65F4120C8976370" : "WakeOnLan\/",
+    "AB378DA4CB780B63B999A285D2B91A28BCA6A3B9" : "WakeOnLan\/submodules\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "WakeOnLan",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 203,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "WakeOnLan.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:ClementPadovani\/WakeOnLan.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3A988CE430A4D895BA575CADD65F4120C8976370"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:timofurrer\/WOL.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "AB378DA4CB780B63B999A285D2B91A28BCA6A3B9"
+    }
+  ]
+}

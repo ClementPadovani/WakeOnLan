@@ -73,9 +73,17 @@
 		598DDBCF1B6A7F20009052F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				59B2A2361B6A80F200CA1708 /* WOL */,
 				598DDBD01B6A7F20009052F6 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59B2A2361B6A80F200CA1708 /* WOL */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = WOL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,6 +112,7 @@
 		598DDBC11B6A7F20009052F6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = WOL;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Clément Padovani";
 				TargetAttributes = {
@@ -256,8 +265,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = WakeOnLan/WakeOnLan.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = WakeOnLan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -271,7 +280,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WakeOnLan/WakeOnLan.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = WakeOnLan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -299,6 +308,7 @@
 				598DDBDF1B6A7F20009052F6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
