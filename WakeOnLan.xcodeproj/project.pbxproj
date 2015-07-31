@@ -7,20 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		598DDBCE1B6A7F20009052F6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 598DDBCD1B6A7F20009052F6 /* AppDelegate.m */; };
+		592C282D1B6BB5BA009DE88D /* WOLwol.c in Sources */ = {isa = PBXBuildFile; fileRef = 592C282B1B6BB5BA009DE88D /* WOLwol.c */; };
 		598DDBD11B6A7F20009052F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 598DDBD01B6A7F20009052F6 /* main.m */; };
-		598DDBD41B6A7F20009052F6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 598DDBD31B6A7F20009052F6 /* ViewController.m */; };
 		598DDBD61B6A7F20009052F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBD51B6A7F20009052F6 /* Assets.xcassets */; };
 		598DDBD91B6A7F20009052F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBD71B6A7F20009052F6 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		592C282B1B6BB5BA009DE88D /* WOLwol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WOLwol.c; sourceTree = "<group>"; };
+		592C282C1B6BB5BA009DE88D /* WOLwol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLwol.h; sourceTree = "<group>"; };
 		598DDBC91B6A7F20009052F6 /* WakeOnLan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeOnLan.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		598DDBCC1B6A7F20009052F6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		598DDBCD1B6A7F20009052F6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		598DDBD01B6A7F20009052F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		598DDBD21B6A7F20009052F6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		598DDBD31B6A7F20009052F6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		598DDBD51B6A7F20009052F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		598DDBD81B6A7F20009052F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		598DDBDA1B6A7F20009052F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,10 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				598DDBE01B6A7FC1009052F6 /* WakeOnLan.entitlements */,
-				598DDBCC1B6A7F20009052F6 /* AppDelegate.h */,
-				598DDBCD1B6A7F20009052F6 /* AppDelegate.m */,
-				598DDBD21B6A7F20009052F6 /* ViewController.h */,
-				598DDBD31B6A7F20009052F6 /* ViewController.m */,
 				598DDBD51B6A7F20009052F6 /* Assets.xcassets */,
 				598DDBD71B6A7F20009052F6 /* Main.storyboard */,
 				598DDBDA1B6A7F20009052F6 /* Info.plist */,
@@ -82,6 +75,8 @@
 		59B2A2361B6A80F200CA1708 /* WOL */ = {
 			isa = PBXGroup;
 			children = (
+				592C282B1B6BB5BA009DE88D /* WOLwol.c */,
+				592C282C1B6BB5BA009DE88D /* WOLwol.h */,
 			);
 			name = WOL;
 			sourceTree = "<group>";
@@ -162,9 +157,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				598DDBD41B6A7F20009052F6 /* ViewController.m in Sources */,
+				592C282D1B6BB5BA009DE88D /* WOLwol.c in Sources */,
 				598DDBD11B6A7F20009052F6 /* main.m in Sources */,
-				598DDBCE1B6A7F20009052F6 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
