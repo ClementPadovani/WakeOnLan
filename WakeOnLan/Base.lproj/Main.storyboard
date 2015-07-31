@@ -220,6 +220,18 @@
                                     <action selector="performSendWOLPacket:" target="XfG-lQ-9wD" id="0fp-bL-z1c"/>
                                 </connections>
                             </button>
+                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rbP-gT-kkQ">
+                                <rect key="frame" x="192" y="169" width="96" height="22"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="MAC Address" drawsBackground="YES" id="50D-CH-3Tn">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <outlet property="delegate" destination="XfG-lQ-9wD" id="Bon-Gq-HrJ"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="PDa-fY-yuf" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="Tnw-VT-3Bi"/>
@@ -228,6 +240,7 @@
                         <animations/>
                     </view>
                     <connections>
+                        <outlet property="macAddressTextField" destination="rbP-gT-kkQ" id="9fv-RU-A9P"/>
                         <outlet property="sendWOLPacketButton" destination="PDa-fY-yuf" id="pMn-Qp-UcY"/>
                     </connections>
                 </viewController>

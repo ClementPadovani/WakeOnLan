@@ -9,9 +9,10 @@
 #import "WOLViewController.h"
 #import "WOLwol.h"
 
-@interface WOLViewController ()
+@interface WOLViewController () <NSTextFieldDelegate>
 
 @property (weak) IBOutlet NSButton *sendWOLPacketButton;
+@property (weak) IBOutlet NSTextField *macAddressTextField;
 
 @end
 
