@@ -58,6 +58,8 @@
 	
 	deviceMACAddress = [deviceMACAddress uppercaseString];
 	
+	CPLog(@"sending to: %@", deviceMACAddress);
+	
 	//	NSString *port = @"4343";
 	
 	unsigned char *networkBroadcastAddress = (unsigned char *) strdup([@"255.255.255.255" UTF8String]);
