@@ -37,9 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F1661ACA246712056BAD5DE /* Pods-UDPWOLTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPWOLTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UDPWOLTestTests/Pods-UDPWOLTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0F379F57538138F64ABCCD6F /* Pods-UDPWOLTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPWOLTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UDPWOLTest/Pods-UDPWOLTest.debug.xcconfig"; sourceTree = "<group>"; };
-		124AA3EA252B50404ECCD6EE /* Pods-UDPWOLTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPWOLTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-UDPWOLTestTests/Pods-UDPWOLTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		18812D1C69E8ACE66DDDA2A2 /* libPods-UDPWOLTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UDPWOLTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6D9C82F3DFC2C179DC3602 /* Pods-UDPWOLTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPWOLTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-UDPWOLTest/Pods-UDPWOLTest.release.xcconfig"; sourceTree = "<group>"; };
 		2DAF09C635E4ACBEB5009951 /* libPods-UDPWOLTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UDPWOLTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,8 +75,6 @@
 		6581E4BE60B9D646E8D4D3A6 /* libPods-TCPTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCPTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C386812AA1F7CEB81AFCBAD0 /* Pods-WakeOnLan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeOnLan.release.xcconfig"; path = "Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan.release.xcconfig"; sourceTree = "<group>"; };
 		C56E21A69DEC95B91B95A202 /* Pods-WakeOnLan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeOnLan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan.debug.xcconfig"; sourceTree = "<group>"; };
-		EA012EBB9CBAB00E539C8FD9 /* Pods-TCPTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCPTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TCPTest/Pods-TCPTest.debug.xcconfig"; sourceTree = "<group>"; };
-		FF260C3838472D282F6DB61A /* Pods-TCPTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TCPTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-TCPTest/Pods-TCPTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,12 +231,8 @@
 			children = (
 				C56E21A69DEC95B91B95A202 /* Pods-WakeOnLan.debug.xcconfig */,
 				C386812AA1F7CEB81AFCBAD0 /* Pods-WakeOnLan.release.xcconfig */,
-				EA012EBB9CBAB00E539C8FD9 /* Pods-TCPTest.debug.xcconfig */,
-				FF260C3838472D282F6DB61A /* Pods-TCPTest.release.xcconfig */,
 				0F379F57538138F64ABCCD6F /* Pods-UDPWOLTest.debug.xcconfig */,
 				1A6D9C82F3DFC2C179DC3602 /* Pods-UDPWOLTest.release.xcconfig */,
-				0F1661ACA246712056BAD5DE /* Pods-UDPWOLTestTests.debug.xcconfig */,
-				124AA3EA252B50404ECCD6EE /* Pods-UDPWOLTestTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
