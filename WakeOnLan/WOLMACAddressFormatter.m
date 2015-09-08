@@ -55,11 +55,14 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 		return NO;
 	}
 	
+	//00:D0:4B:8D:A3:38
+	
 	if([*partialStringPtr length] > kWOLMACAddressFormatterMACAddressLength) {
+		NSLog(@"too long");
 		*error = @"MAC Adress is too long.";
-		*partialStringPtr = origString;
+//		*partialStringPtr = origString;
 		NSBeep();
-		return(NO);
+		return NO;
 	}
 	
 	NSLog(@"partial: %@", *partialStringPtr);
@@ -85,7 +88,8 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 	BOOL didAddCharacter = NO;
 	
 	if ((![lastCharacterString isEqualToString: @":"]) &&
-	    ([strippedString length] % 2 == 0))
+	    ([strippedString length] % 2 == 0) &&
+	    ([strippedString length] < 12))
 	{
 		NSLog(@"do update");
 		
