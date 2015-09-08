@@ -17,9 +17,13 @@
 
 @interface UDPWOLServer () <GCDAsyncUdpSocketDelegate>
 
-@property (nonatomic, weak, readwrite, nullable) id <UDPWOLServerDelegate> delegate;
-
 @property (nonatomic, strong) GCDAsyncUdpSocket *socket;
+
+@property (nonatomic, copy, readwrite) NSString *receivedDataString;
+
+@property (nonatomic, copy, readwrite) NSString *MACAddress;
+
+@property (nonatomic, assign, readwrite) BOOL hasReceived;
 
 @end
 
@@ -50,6 +54,18 @@
 
 
 @implementation UDPWOLServer
+
++ (UDPWOLServer *) sharedServer
+{
+	static UDPWOLServer *_sharedServer = nil;
+	
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		_sharedServer = [[self alloc] init];
+	});
+
+	return _sharedServer;
+}
 
 - (NSString *)getMacAddress
 {
@@ -130,11 +146,9 @@
 	return self;
 }
 
-- (void) setupWithDelegate: (id <UDPWOLServerDelegate>) delegate
+- (void) setup
 {
-	NSParameterAssert(delegate);
-	
-	[self setDelegate: delegate];
+	[self setHasReceived: NO];
 	
 	GCDAsyncUdpSocket *socket = [[GCDAsyncUdpSocket alloc] initWithDelegate: self delegateQueue: dispatch_get_main_queue()];
 	
@@ -160,8 +174,6 @@
 	[[self socket] close];
 	
 	[self setSocket: nil];
-	
-	[self setDelegate: nil];
 }
 
 - (void) udpSocket:(GCDAsyncUdpSocket *)sock didNotConnect:(NSError *)error
@@ -178,9 +190,11 @@
 {
 	NSLog(@"received: %@", [data hexString]);
 	
-	[[self delegate] wolServer: self
-		 didReceiveDataString: [data hexString]
-			  fromMACAddress: [self getMacAddress]];
+	[self setHasReceived: YES];
+	
+	[self setReceivedDataString: [data hexString]];
+	
+	[self setMACAddress: [self MACAddress]];
 }
 
 
