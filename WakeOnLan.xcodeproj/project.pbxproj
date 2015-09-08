@@ -29,12 +29,10 @@
 		592C28351B6BBFBD009DE88D /* WOLMACAddressFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOLMACAddressFormatter.m; sourceTree = "<group>"; };
 		598DDBC91B6A7F20009052F6 /* WakeOnLan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeOnLan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		598DDBD01B6A7F20009052F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		598DDBD51B6A7F20009052F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		598DDBD51B6A7F20009052F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		598DDBD81B6A7F20009052F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		598DDBDA1B6A7F20009052F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		598DDBE01B6A7FC1009052F6 /* WakeOnLan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WakeOnLan.entitlements; sourceTree = "<group>"; };
-		59D5BA9F1B6BE2E5001C8D8F /* WOLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLTextField.h; sourceTree = "<group>"; };
-		59D5BAA01B6BE2E5001C8D8F /* WOLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOLTextField.m; sourceTree = "<group>"; };
+		598DDBDA1B6A7F20009052F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		598DDBE01B6A7FC1009052F6 /* WakeOnLan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = WakeOnLan.entitlements; path = ../WakeOnLan.entitlements; sourceTree = "<group>"; };
 		59DC8F2C1B9EFF4500213180 /* WOLPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WOLPrefixHeader.pch; sourceTree = "<group>"; };
 		C386812AA1F7CEB81AFCBAD0 /* Pods-WakeOnLan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeOnLan.release.xcconfig"; path = "Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan.release.xcconfig"; sourceTree = "<group>"; };
 		C56E21A69DEC95B91B95A202 /* Pods-WakeOnLan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeOnLan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -60,13 +58,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		59441CF11B9F0041006AAF11 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				592C28311B6BB679009DE88D /* WOLViewController.h */,
+				592C28321B6BB679009DE88D /* WOLViewController.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		59441CF21B9F0047006AAF11 /* Formatter */ = {
+			isa = PBXGroup;
+			children = (
+				592C28341B6BBFBD009DE88D /* WOLMACAddressFormatter.h */,
+				592C28351B6BBFBD009DE88D /* WOLMACAddressFormatter.m */,
+			);
+			name = Formatter;
+			sourceTree = "<group>";
+		};
 		598DDBC01B6A7F20009052F6 = {
 			isa = PBXGroup;
 			children = (
+				598DDBCB1B6A7F20009052F6 /* WakeOnLan */,
 				42769041D79F58751A595DBD /* Frameworks */,
 				C6167750D4AFE4C5EAE24BF5 /* Pods */,
 				598DDBCA1B6A7F20009052F6 /* Products */,
-				598DDBCB1B6A7F20009052F6 /* WakeOnLan */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,19 +97,11 @@
 		598DDBCB1B6A7F20009052F6 /* WakeOnLan */ = {
 			isa = PBXGroup;
 			children = (
-				598DDBCF1B6A7F20009052F6 /* Supporting Files */,
-				598DDBD51B6A7F20009052F6 /* Assets.xcassets */,
-				598DDBDA1B6A7F20009052F6 /* Info.plist */,
-				598DDBD71B6A7F20009052F6 /* Main.storyboard */,
 				592C282E1B6BB627009DE88D /* WOLAppDelegate.h */,
 				592C282F1B6BB627009DE88D /* WOLAppDelegate.m */,
-				592C28341B6BBFBD009DE88D /* WOLMACAddressFormatter.h */,
-				592C28351B6BBFBD009DE88D /* WOLMACAddressFormatter.m */,
-				59D5BA9F1B6BE2E5001C8D8F /* WOLTextField.h */,
-				59D5BAA01B6BE2E5001C8D8F /* WOLTextField.m */,
-				592C28311B6BB679009DE88D /* WOLViewController.h */,
-				592C28321B6BB679009DE88D /* WOLViewController.m */,
-				598DDBE01B6A7FC1009052F6 /* WakeOnLan.entitlements */,
+				59441CF21B9F0047006AAF11 /* Formatter */,
+				59441CF11B9F0041006AAF11 /* Views */,
+				598DDBCF1B6A7F20009052F6 /* Supporting Files */,
 			);
 			path = WakeOnLan;
 			sourceTree = "<group>";
@@ -101,9 +109,13 @@
 		598DDBCF1B6A7F20009052F6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				598DDBE01B6A7FC1009052F6 /* WakeOnLan.entitlements */,
+				598DDBDA1B6A7F20009052F6 /* Info.plist */,
 				59B2A2361B6A80F200CA1708 /* WOL */,
 				59DC8F2C1B9EFF4500213180 /* WOLPrefixHeader.pch */,
 				598DDBD01B6A7F20009052F6 /* main.m */,
+				598DDBD51B6A7F20009052F6 /* Assets.xcassets */,
+				598DDBD71B6A7F20009052F6 /* Main.storyboard */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -288,7 +300,7 @@
 				598DDBD81B6A7F20009052F6 /* Base */,
 			);
 			name = Main.storyboard;
-			path = .;
+			path = ../.;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -391,7 +403,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_PREFIX_HEADER = "/Supporting\\ Files/WOLPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "WakeOnLan/Supporting Files/WOLPrefixHeader.pch";
 				INFOPLIST_FILE = WakeOnLan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -412,7 +424,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
-				GCC_PREFIX_HEADER = "/Supporting\\ Files/WOLPrefixHeader.pch";
+				GCC_PREFIX_HEADER = "WakeOnLan/Supporting Files/WOLPrefixHeader.pch";
 				INFOPLIST_FILE = WakeOnLan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;

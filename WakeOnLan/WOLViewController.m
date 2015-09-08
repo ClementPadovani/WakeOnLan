@@ -9,7 +9,6 @@
 #import "WOLViewController.h"
 #import "WOLwol.h"
 #import "WOLMACAddressFormatter.h"
-#import "WOLTextField.h"
 
 @interface WOLViewController () <NSTextFieldDelegate>
 
