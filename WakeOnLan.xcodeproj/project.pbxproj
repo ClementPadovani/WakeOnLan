@@ -39,7 +39,7 @@
 		598DDBD81B6A7F20009052F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		598DDBDA1B6A7F20009052F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		598DDBE01B6A7FC1009052F6 /* WakeOnLan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WakeOnLan.entitlements; sourceTree = "<group>"; };
-		59AC01821B9F04D800AB6E73 /* TCPTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCPTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		59AC01821B9F04D800AB6E73 /* UDPWOLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDPWOLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AC01841B9F04D800AB6E73 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59AC01851B9F04D800AB6E73 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		59AC01881B9F04D800AB6E73 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				598DDBCB1B6A7F20009052F6 /* WakeOnLan */,
-				59AC01831B9F04D800AB6E73 /* TCPTest */,
+				59AC01831B9F04D800AB6E73 /* UDPWOLTest */,
 				42769041D79F58751A595DBD /* Frameworks */,
 				C6167750D4AFE4C5EAE24BF5 /* Pods */,
 				598DDBCA1B6A7F20009052F6 /* Products */,
@@ -119,7 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				598DDBC91B6A7F20009052F6 /* WakeOnLan.app */,
-				59AC01821B9F04D800AB6E73 /* TCPTest.app */,
+				59AC01821B9F04D800AB6E73 /* UDPWOLTest.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,7 +150,7 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		59AC01831B9F04D800AB6E73 /* TCPTest */ = {
+		59AC01831B9F04D800AB6E73 /* UDPWOLTest */ = {
 			isa = PBXGroup;
 			children = (
 				59EB30271B9F070900DCD6F9 /* TCPTest.entitlements */,
@@ -163,6 +163,7 @@
 				59AC01921B9F04D800AB6E73 /* Info.plist */,
 				59AC01871B9F04D800AB6E73 /* Supporting Files */,
 			);
+			name = UDPWOLTest;
 			path = TCPTest;
 			sourceTree = "<group>";
 		};
@@ -218,9 +219,9 @@
 			productReference = 598DDBC91B6A7F20009052F6 /* WakeOnLan.app */;
 			productType = "com.apple.product-type.application";
 		};
-		59AC01811B9F04D800AB6E73 /* TCPTest */ = {
+		59AC01811B9F04D800AB6E73 /* UDPWOLTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 59AC01951B9F04D800AB6E73 /* Build configuration list for PBXNativeTarget "TCPTest" */;
+			buildConfigurationList = 59AC01951B9F04D800AB6E73 /* Build configuration list for PBXNativeTarget "UDPWOLTest" */;
 			buildPhases = (
 				2AECED3BC4D7A0E6BF0A1685 /* Check Pods Manifest.lock */,
 				59AC017E1B9F04D800AB6E73 /* Sources */,
@@ -233,9 +234,9 @@
 			);
 			dependencies = (
 			);
-			name = TCPTest;
+			name = UDPWOLTest;
 			productName = TCPTest;
-			productReference = 59AC01821B9F04D800AB6E73 /* TCPTest.app */;
+			productReference = 59AC01821B9F04D800AB6E73 /* UDPWOLTest.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -284,7 +285,7 @@
 			projectRoot = "";
 			targets = (
 				598DDBC81B6A7F20009052F6 /* WakeOnLan */,
-				59AC01811B9F04D800AB6E73 /* TCPTest */,
+				59AC01811B9F04D800AB6E73 /* UDPWOLTest */,
 			);
 		};
 /* End PBXProject section */
@@ -605,7 +606,8 @@
 				);
 				INFOPLIST_FILE = TCPTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.clementpadovani.TCPTest;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clementpadovani.UDPWOLTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -619,7 +621,8 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = TCPTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.clementpadovani.TCPTest;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				PRODUCT_BUNDLE_IDENTIFIER = com.clementpadovani.UDPWOLTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -645,7 +648,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		59AC01951B9F04D800AB6E73 /* Build configuration list for PBXNativeTarget "TCPTest" */ = {
+		59AC01951B9F04D800AB6E73 /* Build configuration list for PBXNativeTarget "UDPWOLTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				59AC01931B9F04D800AB6E73 /* Debug */,
