@@ -63,10 +63,10 @@
 		598DDBC01B6A7F20009052F6 = {
 			isa = PBXGroup;
 			children = (
-				598DDBCB1B6A7F20009052F6 /* WakeOnLan */,
-				598DDBCA1B6A7F20009052F6 /* Products */,
-				C6167750D4AFE4C5EAE24BF5 /* Pods */,
 				42769041D79F58751A595DBD /* Frameworks */,
+				C6167750D4AFE4C5EAE24BF5 /* Pods */,
+				598DDBCA1B6A7F20009052F6 /* Products */,
+				598DDBCB1B6A7F20009052F6 /* WakeOnLan */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,19 +81,19 @@
 		598DDBCB1B6A7F20009052F6 /* WakeOnLan */ = {
 			isa = PBXGroup;
 			children = (
-				598DDBE01B6A7FC1009052F6 /* WakeOnLan.entitlements */,
+				598DDBCF1B6A7F20009052F6 /* Supporting Files */,
+				598DDBD51B6A7F20009052F6 /* Assets.xcassets */,
+				598DDBDA1B6A7F20009052F6 /* Info.plist */,
+				598DDBD71B6A7F20009052F6 /* Main.storyboard */,
 				592C282E1B6BB627009DE88D /* WOLAppDelegate.h */,
 				592C282F1B6BB627009DE88D /* WOLAppDelegate.m */,
-				592C28311B6BB679009DE88D /* WOLViewController.h */,
-				592C28321B6BB679009DE88D /* WOLViewController.m */,
 				592C28341B6BBFBD009DE88D /* WOLMACAddressFormatter.h */,
 				592C28351B6BBFBD009DE88D /* WOLMACAddressFormatter.m */,
 				59D5BA9F1B6BE2E5001C8D8F /* WOLTextField.h */,
 				59D5BAA01B6BE2E5001C8D8F /* WOLTextField.m */,
-				598DDBD51B6A7F20009052F6 /* Assets.xcassets */,
-				598DDBD71B6A7F20009052F6 /* Main.storyboard */,
-				598DDBDA1B6A7F20009052F6 /* Info.plist */,
-				598DDBCF1B6A7F20009052F6 /* Supporting Files */,
+				592C28311B6BB679009DE88D /* WOLViewController.h */,
+				592C28321B6BB679009DE88D /* WOLViewController.m */,
+				598DDBE01B6A7FC1009052F6 /* WakeOnLan.entitlements */,
 			);
 			path = WakeOnLan;
 			sourceTree = "<group>";
@@ -102,10 +102,10 @@
 			isa = PBXGroup;
 			children = (
 				59B2A2361B6A80F200CA1708 /* WOL */,
-				598DDBD01B6A7F20009052F6 /* main.m */,
 				59DC8F2C1B9EFF4500213180 /* WOLPrefixHeader.pch */,
+				598DDBD01B6A7F20009052F6 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		59B2A2361B6A80F200CA1708 /* WOL */ = {
@@ -114,7 +114,7 @@
 				592C282B1B6BB5BA009DE88D /* WOLwol.c */,
 				592C282C1B6BB5BA009DE88D /* WOLwol.h */,
 			);
-			name = WOL;
+			path = WOL;
 			sourceTree = "<group>";
 		};
 		C6167750D4AFE4C5EAE24BF5 /* Pods */ = {
@@ -288,6 +288,7 @@
 				598DDBD81B6A7F20009052F6 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
