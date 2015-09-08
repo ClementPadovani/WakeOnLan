@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3899673810F9EF40497C6D5B /* libPods-UDPWOLTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DAF09C635E4ACBEB5009951 /* libPods-UDPWOLTest.a */; };
 		592C282D1B6BB5BA009DE88D /* WOLwol.c in Sources */ = {isa = PBXBuildFile; fileRef = 592C282B1B6BB5BA009DE88D /* WOLwol.c */; };
 		592C28301B6BB627009DE88D /* WOLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C282F1B6BB627009DE88D /* WOLAppDelegate.m */; };
 		592C28331B6BB679009DE88D /* WOLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C28321B6BB679009DE88D /* WOLViewController.m */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DAF09C635E4ACBEB5009951 /* libPods-UDPWOLTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UDPWOLTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B51891E3C77B181287EB7E6 /* libPods-WakeOnLan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakeOnLan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		592C282B1B6BB5BA009DE88D /* WOLwol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WOLwol.c; sourceTree = "<group>"; };
 		592C282C1B6BB5BA009DE88D /* WOLwol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLwol.h; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4567681D4BE26409195B95A /* libPods-TCPTest.a in Frameworks */,
+				3899673810F9EF40497C6D5B /* libPods-UDPWOLTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 			children = (
 				4B51891E3C77B181287EB7E6 /* libPods-WakeOnLan.a */,
 				6581E4BE60B9D646E8D4D3A6 /* libPods-TCPTest.a */,
+				2DAF09C635E4ACBEB5009951 /* libPods-UDPWOLTest.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -381,7 +385,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCPTest/Pods-TCPTest-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UDPWOLTest/Pods-UDPWOLTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		73E7365774C4E2C5E1D5CFBB /* Copy Pods Resources */ = {
@@ -411,7 +415,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TCPTest/Pods-TCPTest-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UDPWOLTest/Pods-UDPWOLTest-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
