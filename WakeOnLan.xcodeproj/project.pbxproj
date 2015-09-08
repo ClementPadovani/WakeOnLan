@@ -14,9 +14,11 @@
 		598DDBD11B6A7F20009052F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 598DDBD01B6A7F20009052F6 /* main.m */; };
 		598DDBD61B6A7F20009052F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBD51B6A7F20009052F6 /* Assets.xcassets */; };
 		598DDBD91B6A7F20009052F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBD71B6A7F20009052F6 /* Main.storyboard */; };
+		70384D3C4D9EB9FFBFB68E76 /* libPods-WakeOnLan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B51891E3C77B181287EB7E6 /* libPods-WakeOnLan.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B51891E3C77B181287EB7E6 /* libPods-WakeOnLan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakeOnLan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		592C282B1B6BB5BA009DE88D /* WOLwol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WOLwol.c; sourceTree = "<group>"; };
 		592C282C1B6BB5BA009DE88D /* WOLwol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLwol.h; sourceTree = "<group>"; };
 		592C282E1B6BB627009DE88D /* WOLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLAppDelegate.h; sourceTree = "<group>"; };
@@ -33,6 +35,8 @@
 		598DDBE01B6A7FC1009052F6 /* WakeOnLan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WakeOnLan.entitlements; sourceTree = "<group>"; };
 		59D5BA9F1B6BE2E5001C8D8F /* WOLTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLTextField.h; sourceTree = "<group>"; };
 		59D5BAA01B6BE2E5001C8D8F /* WOLTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOLTextField.m; sourceTree = "<group>"; };
+		C386812AA1F7CEB81AFCBAD0 /* Pods-WakeOnLan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeOnLan.release.xcconfig"; path = "Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan.release.xcconfig"; sourceTree = "<group>"; };
+		C56E21A69DEC95B91B95A202 /* Pods-WakeOnLan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeOnLan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,17 +44,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70384D3C4D9EB9FFBFB68E76 /* libPods-WakeOnLan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		42769041D79F58751A595DBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4B51891E3C77B181287EB7E6 /* libPods-WakeOnLan.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		598DDBC01B6A7F20009052F6 = {
 			isa = PBXGroup;
 			children = (
 				598DDBCB1B6A7F20009052F6 /* WakeOnLan */,
 				598DDBCA1B6A7F20009052F6 /* Products */,
+				C6167750D4AFE4C5EAE24BF5 /* Pods */,
+				42769041D79F58751A595DBD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +115,15 @@
 			name = WOL;
 			sourceTree = "<group>";
 		};
+		C6167750D4AFE4C5EAE24BF5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C56E21A69DEC95B91B95A202 /* Pods-WakeOnLan.debug.xcconfig */,
+				C386812AA1F7CEB81AFCBAD0 /* Pods-WakeOnLan.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -107,9 +131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 598DDBDD1B6A7F20009052F6 /* Build configuration list for PBXNativeTarget "WakeOnLan" */;
 			buildPhases = (
+				30CA155502DCA11B92BD5D18 /* Check Pods Manifest.lock */,
 				598DDBC51B6A7F20009052F6 /* Sources */,
 				598DDBC61B6A7F20009052F6 /* Frameworks */,
 				598DDBC71B6A7F20009052F6 /* Resources */,
+				4A910D55C143B73F2FEFACE8 /* Embed Pods Frameworks */,
+				73E7365774C4E2C5E1D5CFBB /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -173,6 +200,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		30CA155502DCA11B92BD5D18 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4A910D55C143B73F2FEFACE8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73E7365774C4E2C5E1D5CFBB /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		598DDBC51B6A7F20009052F6 /* Sources */ = {
@@ -284,6 +359,7 @@
 		};
 		598DDBDE1B6A7F20009052F6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C56E21A69DEC95B91B95A202 /* Pods-WakeOnLan.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
@@ -304,6 +380,7 @@
 		};
 		598DDBDF1B6A7F20009052F6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C386812AA1F7CEB81AFCBAD0 /* Pods-WakeOnLan.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
