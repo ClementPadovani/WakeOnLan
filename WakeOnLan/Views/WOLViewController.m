@@ -48,8 +48,44 @@
 //										 }];
 }
 
+- (BOOL) isMACAddressValid
+{
+	static const NSUInteger kAddressLength = 17;
+	
+	if ([[[self macAddressTextField] stringValue] length] != kAddressLength)
+		return NO;
+	
+	NSArray *components = [[[self macAddressTextField] stringValue] componentsSeparatedByString: @":"];
+	
+	__block BOOL hasInvalidCharacter = NO;
+	
+	NSCharacterSet *disallowedCharacters = [[NSCharacterSet characterSetWithCharactersInString: @"0123456789:abcdefABCDEF"] invertedSet];
+	
+	[components enumerateObjectsUsingBlock: ^(NSString  *_Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+		
+		if ([obj rangeOfCharacterFromSet: disallowedCharacters].location != NSNotFound)
+		{
+			hasInvalidCharacter = YES;
+
+			*stop = YES;
+		}
+		
+	}];
+	
+	return !hasInvalidCharacter;
+}
+
+- (IBAction) userDidPressReturn: (id) sender
+{
+	if ([self isMACAddressValid])
+		[self performSendWOLPacket: nil];
+}
+
 - (IBAction) performSendWOLPacket: (NSButton *) sender
 {
+	if (![self isMACAddressValid])
+		return;
+	
 //	NSString *lacieMACAddress = @"00:D0:4B:8D:A3:38";
 	
 //	NSString *lacieMACAddress = @"64:76:ba:8e:83:d2";
@@ -57,8 +93,6 @@
 	NSString *deviceMACAddress = [[self macAddressTextField] stringValue];
 	
 	deviceMACAddress = [deviceMACAddress uppercaseString];
-	
-	CPLog(@"sending to: %@", deviceMACAddress);
 	
 	//	NSString *port = @"4343";
 	

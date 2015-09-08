@@ -236,6 +236,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
+                                    <action selector="userDidPressReturn:" target="XfG-lQ-9wD" id="fUd-em-Jio"/>
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="Bon-Gq-HrJ"/>
                                 </connections>
                             </textField>
