@@ -49,6 +49,7 @@
 		59AC01901B9F04D800AB6E73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		59AC01921B9F04D800AB6E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59DC8F2C1B9EFF4500213180 /* WOLPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WOLPrefixHeader.pch; sourceTree = "<group>"; };
+		59EB30271B9F070900DCD6F9 /* TCPTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TCPTest.entitlements; sourceTree = "<group>"; };
 		6581E4BE60B9D646E8D4D3A6 /* libPods-TCPTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCPTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C386812AA1F7CEB81AFCBAD0 /* Pods-WakeOnLan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeOnLan.release.xcconfig"; path = "Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan.release.xcconfig"; sourceTree = "<group>"; };
 		C56E21A69DEC95B91B95A202 /* Pods-WakeOnLan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeOnLan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan.debug.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +153,7 @@
 		59AC01831B9F04D800AB6E73 /* TCPTest */ = {
 			isa = PBXGroup;
 			children = (
+				59EB30271B9F070900DCD6F9 /* TCPTest.entitlements */,
 				59AC01841B9F04D800AB6E73 /* AppDelegate.h */,
 				59AC01851B9F04D800AB6E73 /* AppDelegate.m */,
 				59AC018A1B9F04D800AB6E73 /* ViewController.h */,
@@ -260,6 +262,11 @@
 					};
 					59AC01811B9F04D800AB6E73 = {
 						CreatedOnToolsVersion = 7.0;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
