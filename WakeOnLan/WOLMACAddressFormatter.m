@@ -46,6 +46,8 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 
 - (BOOL) isPartialStringValid:(NSString *__autoreleasing  _Nonnull *)partialStringPtr proposedSelectedRange:(NSRangePointer)proposedSelRangePtr originalString:(NSString *)origString originalSelectedRange:(NSRange)origSelRange errorDescription:(NSString *__autoreleasing  _Nullable *)error
 {
+//	NSLog(@"proposed: %@", NSStringFromRange(*proposedSelRangePtr));
+	
 	NSRange foundRange;
 	NSCharacterSet *disallowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789:abcdefABCDEF"] invertedSet];
 	foundRange = [*partialStringPtr rangeOfCharacterFromSet:disallowedCharacters];
@@ -65,7 +67,87 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 	}
 	
 	if ([origString length] > [*partialStringPtr length])
+	{
+//		NSLog(@"proposed range: %@", NSStringFromRange(*proposedSelRangePtr));
+//		
+//		NSLog(@"selected string: %@", [*partialStringPtr substringWithRange: *proposedSelRangePtr]);
+//		
+//		NSLog(@"selected string: %@", [origString substringWithRange: *proposedSelRangePtr]);
+//		
+//		NSLog(@"string: %@", [origString substringWithRange: origSelRange]);
+		
+		NSString *deletedString = [origString substringWithRange: origSelRange];
+		
+		NSString *remainingString = [origString substringFromIndex: origSelRange.location + origSelRange.length];
+		
+		NSString *beginningString = [origString substringToIndex: origSelRange.location];
+		
+		if (remainingString &&
+		    [remainingString length])
+		{
+//			NSLog(@"has string");
+			
+			*partialStringPtr = beginningString;
+			
+			proposedSelRangePtr->location = [beginningString length];
+			
+			return NO;
+		}
+		
+		if ([deletedString isEqualToString: @":"])
+		{
+			NSString *updatedString = [origString substringToIndex: origSelRange.location - 1];
+			
+//			NSLog(@"updated: %@", updatedString);
+			
+			*partialStringPtr = updatedString;
+			
+			proposedSelRangePtr->location = [updatedString length];
+			
+			return NO;
+		}
+		
 		return YES;
+	}
+	
+	NSString *tempPartialString = [*partialStringPtr copy];
+	
+	if ([tempPartialString length] % 2 != 0)
+	{
+		NSArray *addressParts = [tempPartialString componentsSeparatedByString: @":"];
+		
+		if ([addressParts count] == 1)
+		{
+			if ([tempPartialString length] > 2)
+			{
+				NSMutableString *newPartialString = [NSMutableString string];
+				
+				__block NSUInteger currentIndex = 0;
+				
+				[tempPartialString enumerateSubstringsInRange: NSMakeRange(0, [tempPartialString length])
+											   options: NSStringEnumerationByComposedCharacterSequences
+											usingBlock: ^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
+												
+//												NSLog(@"char: %@", substring);
+												
+												if (currentIndex != 0 &&
+												    currentIndex % 2 == 0)
+													[newPartialString appendString: @":"];
+												
+												[newPartialString appendString: [substring uppercaseString]];
+												
+												
+												
+												currentIndex++;
+												
+											}];
+				
+				tempPartialString = [newPartialString copy];
+				
+				*partialStringPtr = [tempPartialString copy];
+			}
+		}
+	}
 	
 	NSString *strippedString = [*partialStringPtr stringByReplacingOccurrencesOfString: @":"
 														   withString: @""];

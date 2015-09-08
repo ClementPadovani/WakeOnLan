@@ -27,11 +27,7 @@
 	[super viewDidLoad];
 	
 	[[self macAddressTextField] setAllowsEditingTextAttributes: NO];
-	
-	NSFont *font = [NSFont fontWithName: @"Monaco" size: [NSFont systemFontSize]];
-	
-	[[self macAddressTextField] setFont: font];
-	
+		
 	WOLMACAddressFormatter *macAddressFormatter = [[WOLMACAddressFormatter alloc] init];
 
 	[self setMacAddressFormatter: macAddressFormatter];
@@ -51,13 +47,6 @@
 //											 NSLog(@"notification: %@", note);
 //											 
 //										 }];
-}
-
-- (void) textFieldDidChange: (NSNotification *) notification
-{
-	NSLog(@"did change");
-	
-//	[[self macAddressTextField] invalidateIntrinsicContentSize];
 }
 
 - (IBAction) performSendWOLPacket: (NSButton *) sender
