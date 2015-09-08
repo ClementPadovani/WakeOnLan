@@ -25,7 +25,6 @@
 		59B529751B9F1B2500E6D275 /* UDPWOLTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B529741B9F1B2500E6D275 /* UDPWOLTestTests.m */; };
 		59B5297C1B9F1B2D00E6D275 /* UDPWOLServerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B5296A1B9F100A00E6D275 /* UDPWOLServerSpec.m */; settings = {ASSET_TAGS = (); }; };
 		70384D3C4D9EB9FFBFB68E76 /* libPods-WakeOnLan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B51891E3C77B181287EB7E6 /* libPods-WakeOnLan.a */; };
-		C4567681D4BE26409195B95A /* libPods-TCPTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6581E4BE60B9D646E8D4D3A6 /* libPods-TCPTest.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,7 +95,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4567681D4BE26409195B95A /* libPods-TCPTest.a in Frameworks */,
 				3899673810F9EF40497C6D5B /* libPods-UDPWOLTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
