@@ -10,7 +10,7 @@ pod 'Crashlytics-OSX', :configurations => ['Release']
 
 end
 
-target 'TCPTest', :exclusive => true do
+target 'UDPWOLTest', :exclusive => true do
 
 pod 'Kiwi'
 
