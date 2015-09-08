@@ -13,6 +13,7 @@
 		592C28301B6BB627009DE88D /* WOLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C282F1B6BB627009DE88D /* WOLAppDelegate.m */; };
 		592C28331B6BB679009DE88D /* WOLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C28321B6BB679009DE88D /* WOLViewController.m */; };
 		592C28361B6BBFBD009DE88D /* WOLMACAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C28351B6BBFBD009DE88D /* WOLMACAddressFormatter.m */; };
+		5961CBC61B9F314300D539A8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5961CBC51B9F314300D539A8 /* XCTest.framework */; settings = {ASSET_TAGS = (); }; };
 		598DDBD11B6A7F20009052F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 598DDBD01B6A7F20009052F6 /* main.m */; };
 		598DDBD61B6A7F20009052F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBD51B6A7F20009052F6 /* Assets.xcassets */; };
 		598DDBD91B6A7F20009052F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBD71B6A7F20009052F6 /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		592C28321B6BB679009DE88D /* WOLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOLViewController.m; sourceTree = "<group>"; };
 		592C28341B6BBFBD009DE88D /* WOLMACAddressFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLMACAddressFormatter.h; sourceTree = "<group>"; };
 		592C28351B6BBFBD009DE88D /* WOLMACAddressFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOLMACAddressFormatter.m; sourceTree = "<group>"; };
+		5961CBC51B9F314300D539A8 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		598DDBC91B6A7F20009052F6 /* WakeOnLan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeOnLan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		598DDBD01B6A7F20009052F6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		598DDBD51B6A7F20009052F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				482CBE01B8BDEA8D45710DC2 /* libPods-UDPWOLTestTests.a in Frameworks */,
+				5961CBC61B9F314300D539A8 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +115,7 @@
 		42769041D79F58751A595DBD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5961CBC51B9F314300D539A8 /* XCTest.framework */,
 				4B51891E3C77B181287EB7E6 /* libPods-WakeOnLan.a */,
 				6581E4BE60B9D646E8D4D3A6 /* libPods-TCPTest.a */,
 				2DAF09C635E4ACBEB5009951 /* libPods-UDPWOLTest.a */,
