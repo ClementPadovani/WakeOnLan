@@ -1,0 +1,30 @@
+//
+//  WOLPrefixHeader.pch
+//  WakeOnLan
+//
+//  Created by Clément Padovani on 9/8/15.
+//  Copyright © 2015 Clément Padovani. All rights reserved.
+//
+
+#ifndef WOLPrefixHeader_pch
+#define WOLPrefixHeader_pch
+
+#ifdef RELEASE
+
+@import Fabric;
+@import Crashlytics;
+
+#define CPLog(__FORMAT__, ...) CLSLog((@"%s line %d $ " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+
+//#define CPLog(__FORMAT__, ...) CLSNSLog((@"%s line %d $ " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+//
+//#define CPLog(__FORMAT__, ...) NSLog((@"%s line %d $ " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+
+
+#else
+
+#define CPLog(__FORMAT__, ...) NSLog((@"%s line %d $ " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+
+#endif
+
+#endif /* WOLPrefixHeader_pch */
