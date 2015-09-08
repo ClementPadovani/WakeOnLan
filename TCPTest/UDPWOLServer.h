@@ -10,7 +10,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class UDPWOLServer;
+
+@protocol UDPWOLServerDelegate <NSObject>
+
+- (void) wolServer: (UDPWOLServer *) server didReceiveDataString: (NSString *) dataString fromMACAddress: (NSString *) macAddress;
+
+@end
+
 @interface UDPWOLServer : NSObject
+
+@property (nonatomic, weak, readonly, nullable) id <UDPWOLServerDelegate> delegate;
+
+- (void) setupWithDelegate: (id <UDPWOLServerDelegate>) delegate;
+
+- (void) tearDown;
 
 @end
 
