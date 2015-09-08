@@ -42,6 +42,7 @@
 		1A6D9C82F3DFC2C179DC3602 /* Pods-UDPWOLTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPWOLTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-UDPWOLTest/Pods-UDPWOLTest.release.xcconfig"; sourceTree = "<group>"; };
 		2DAF09C635E4ACBEB5009951 /* libPods-UDPWOLTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UDPWOLTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B51891E3C77B181287EB7E6 /* libPods-WakeOnLan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakeOnLan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		592872161B9F417C00E59298 /* UDPWOLTestPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDPWOLTestPrefixHeader.pch; sourceTree = "<group>"; };
 		592C282B1B6BB5BA009DE88D /* WOLwol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WOLwol.c; sourceTree = "<group>"; };
 		592C282C1B6BB5BA009DE88D /* WOLwol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLwol.h; sourceTree = "<group>"; };
 		592C282E1B6BB627009DE88D /* WOLAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLAppDelegate.h; sourceTree = "<group>"; };
@@ -212,6 +213,7 @@
 		59AC01871B9F04D800AB6E73 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				592872161B9F417C00E59298 /* UDPWOLTestPrefixHeader.pch */,
 				59AC01881B9F04D800AB6E73 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -723,6 +725,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = TCPTest/UDPWOLTestPrefixHeader.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -742,6 +745,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = TCPTest/UDPWOLTestPrefixHeader.pch;
 				INFOPLIST_FILE = TCPTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
@@ -778,6 +782,7 @@
 				59A92E491B9F3ACF001B1985 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		59AC01951B9F04D800AB6E73 /* Build configuration list for PBXNativeTarget "UDPWOLTest" */ = {
 			isa = XCConfigurationList;

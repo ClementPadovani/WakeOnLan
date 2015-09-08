@@ -1,0 +1,28 @@
+//
+//  UDPWOLTestPrefixHeader.pch
+//  WakeOnLan
+//
+//  Created by Clément Padovani on 9/8/15.
+//  Copyright © 2015 Clément Padovani. All rights reserved.
+//
+
+#ifndef UDPWOLTestPrefixHeader_pch
+#define UDPWOLTestPrefixHeader_pch
+
+@import Foundation;
+
+#pragma once
+
+#ifndef NS_ASSUME_NONNULL_BEGIN
+	#define NS_ASSUME_NONNULL_BEGIN
+#endif
+
+#ifndef NS_ASSUME_NONNULL_END
+	#define NS_ASSUME_NONNULL_END
+#endif
+
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* UDPWOLTestPrefixHeader_pch */
