@@ -4,15 +4,18 @@ PODS:
   - Fabric-OSX (1.4.1):
     - Fabric-OSX/Base (= 1.4.1)
   - Fabric-OSX/Base (1.4.1)
+  - NSBundle+LoginItem (1.0.4)
 
 DEPENDENCIES:
   - CocoaAsyncSocket
   - Crashlytics-OSX
   - Fabric-OSX
+  - NSBundle+LoginItem
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: f5783bdedd232d91b89769bc4b5a1580aed518ad
   Crashlytics-OSX: ce7451e97fcc263a77fdc61a78eada431f13d67d
   Fabric-OSX: 90581190639871278fe933dba9ebab41a099224e
+  NSBundle+LoginItem: 43a2fad3858e519c7a7fa117daf12e53278ee902
 
 COCOAPODS: 0.39.0.beta.4

@@ -150,7 +150,12 @@
 {
 	NSLog(@"setup");
 	
-	
+	if ([self socket])
+	{
+		NSLog(@"has socket");
+		
+		return;
+	}
 	
 	[self setHasReceived: NO];
 	
@@ -204,7 +209,7 @@
 	
 	[self setReceivedDataString: [data hexString]];
 	
-	[self setMACAddress: [self MACAddress]];
+	[self setMACAddress: [self getMacAddress]];
 }
 
 

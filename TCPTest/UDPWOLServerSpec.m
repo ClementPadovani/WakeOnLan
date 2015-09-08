@@ -23,6 +23,8 @@
 
 @implementation UDPWOLServerSpec
 
+
+
 - (void) setUp
 {
 	[[UDPWOLServer sharedServer] setup];
@@ -30,7 +32,7 @@
 
 - (void) tearDown
 {
-	[[UDPWOLServer sharedServer] tearDown];
+//	[[UDPWOLServer sharedServer] tearDown];
 }
 
 - (NSString *) MACAddress
@@ -110,6 +112,8 @@
 	
 	MACAddress = [MACAddress uppercaseString];
 	
+	NSLog(@"address: %@", MACAddress);
+	
 	//	NSString *port = @"4343";
 	
 	unsigned char *networkBroadcastAddress = (unsigned char *) strdup([@"255.255.255.255" UTF8String]);
@@ -123,10 +127,22 @@
 
 - (void) testReceivedData
 {
+	XCTestExpectation *expectation = [self expectationWithDescription: @"data"];
+	
 	UDPWOLServer *server = [UDPWOLServer sharedServer];
+
+	
+	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+
+		[expectation fulfill];
 	
 	NSString *serverMACAddress = [server MACAddress];
 
+		serverMACAddress = [serverMACAddress stringByReplacingOccurrencesOfString: @":"
+														   withString: @""];
+		
+		
+		
 	XCTAssertEqual([serverMACAddress length], 12);
 
 	XCTAssertTrue([server hasReceived]);
@@ -154,6 +170,14 @@
 	NSLog(@"address: %@", [server MACAddress]);
 	
 	NSLog(@"data: %@", [server receivedDataString]);
+	
+	
+		
+	});
+
+	[self waitForExpectationsWithTimeout: 6 handler: ^(NSError * _Nullable error) {
+		NSLog(@"error: %@", error);
+	}];
 }
 
 @end

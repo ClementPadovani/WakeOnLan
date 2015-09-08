@@ -69,7 +69,10 @@ int send_wol_packet(unsigned char *broadcast_addr, unsigned char *mac_addr, bool
 	sin.sin_port = htons(9);
 	
 	if (isDebug)
-		sin.sin_port = 1025;
+	{
+		printf("is debug");
+		sin.sin_port = htons(1025);
+	}
 	
 	if ((sd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) < 0) {
 		fprintf(stderr, "Can't get socket.\n");
