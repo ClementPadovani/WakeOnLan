@@ -79,10 +79,10 @@
 		598DDBC01B6A7F20009052F6 = {
 			isa = PBXGroup;
 			children = (
+				598DDBCB1B6A7F20009052F6 /* WakeOnLan */,
 				42769041D79F58751A595DBD /* Frameworks */,
 				C6167750D4AFE4C5EAE24BF5 /* Pods */,
 				598DDBCA1B6A7F20009052F6 /* Products */,
-				598DDBCB1B6A7F20009052F6 /* WakeOnLan */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,11 +97,11 @@
 		598DDBCB1B6A7F20009052F6 /* WakeOnLan */ = {
 			isa = PBXGroup;
 			children = (
-				59441CF21B9F0047006AAF11 /* Formatter */,
-				598DDBCF1B6A7F20009052F6 /* Supporting Files */,
-				59441CF11B9F0041006AAF11 /* Views */,
 				592C282E1B6BB627009DE88D /* WOLAppDelegate.h */,
 				592C282F1B6BB627009DE88D /* WOLAppDelegate.m */,
+				59441CF21B9F0047006AAF11 /* Formatter */,
+				59441CF11B9F0041006AAF11 /* Views */,
+				598DDBCF1B6A7F20009052F6 /* Supporting Files */,
 			);
 			path = WakeOnLan;
 			sourceTree = "<group>";
