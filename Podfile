@@ -18,6 +18,4 @@ end
 
 target 'UDPWOLTestTests', :exclusive => true do
 
-pod 'Kiwi'
-
 end

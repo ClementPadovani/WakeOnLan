@@ -4,18 +4,15 @@ PODS:
   - Fabric-OSX (1.4.1):
     - Fabric-OSX/Base (= 1.4.1)
   - Fabric-OSX/Base (1.4.1)
-  - Kiwi (2.4.0)
 
 DEPENDENCIES:
   - CocoaAsyncSocket
   - Crashlytics-OSX
   - Fabric-OSX
-  - Kiwi
 
 SPEC CHECKSUMS:
   CocoaAsyncSocket: f5783bdedd232d91b89769bc4b5a1580aed518ad
   Crashlytics-OSX: ce7451e97fcc263a77fdc61a78eada431f13d67d
   Fabric-OSX: 90581190639871278fe933dba9ebab41a099224e
-  Kiwi: f49c9d54b28917df5928fe44968a39ed198cb8a8
 
 COCOAPODS: 0.39.0.beta.4
