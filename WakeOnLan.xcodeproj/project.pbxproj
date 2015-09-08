@@ -138,12 +138,12 @@
 		598DDBC01B6A7F20009052F6 = {
 			isa = PBXGroup;
 			children = (
-				598DDBCB1B6A7F20009052F6 /* WakeOnLan */,
-				59AC01831B9F04D800AB6E73 /* UDPWOLTest */,
-				59A92E421B9F3ACF001B1985 /* UDPWOLActualTests */,
 				42769041D79F58751A595DBD /* Frameworks */,
 				C6167750D4AFE4C5EAE24BF5 /* Pods */,
 				598DDBCA1B6A7F20009052F6 /* Products */,
+				59A92E421B9F3ACF001B1985 /* UDPWOLActualTests */,
+				59AC01831B9F04D800AB6E73 /* UDPWOLTest */,
+				598DDBCB1B6A7F20009052F6 /* WakeOnLan */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,11 +160,11 @@
 		598DDBCB1B6A7F20009052F6 /* WakeOnLan */ = {
 			isa = PBXGroup;
 			children = (
+				59441CF21B9F0047006AAF11 /* Formatter */,
+				598DDBCF1B6A7F20009052F6 /* Supporting Files */,
+				59441CF11B9F0041006AAF11 /* Views */,
 				592C282E1B6BB627009DE88D /* WOLAppDelegate.h */,
 				592C282F1B6BB627009DE88D /* WOLAppDelegate.m */,
-				59441CF21B9F0047006AAF11 /* Formatter */,
-				59441CF11B9F0041006AAF11 /* Views */,
-				598DDBCF1B6A7F20009052F6 /* Supporting Files */,
 			);
 			path = WakeOnLan;
 			sourceTree = "<group>";
@@ -186,8 +186,8 @@
 		59A92E421B9F3ACF001B1985 /* UDPWOLActualTests */ = {
 			isa = PBXGroup;
 			children = (
-				59A92E431B9F3ACF001B1985 /* UDPWOLActualTests.m */,
 				59A92E451B9F3ACF001B1985 /* Info.plist */,
+				59A92E431B9F3ACF001B1985 /* UDPWOLActualTests.m */,
 			);
 			path = UDPWOLActualTests;
 			sourceTree = "<group>";
@@ -195,19 +195,18 @@
 		59AC01831B9F04D800AB6E73 /* UDPWOLTest */ = {
 			isa = PBXGroup;
 			children = (
+				59AC01871B9F04D800AB6E73 /* Supporting Files */,
 				59AC01841B9F04D800AB6E73 /* AppDelegate.h */,
 				59AC01851B9F04D800AB6E73 /* AppDelegate.m */,
-				59AC018A1B9F04D800AB6E73 /* ViewController.h */,
-				59AC018B1B9F04D800AB6E73 /* ViewController.m */,
+				59AC018D1B9F04D800AB6E73 /* Assets.xcassets */,
+				59AC01921B9F04D800AB6E73 /* Info.plist */,
+				59AC018F1B9F04D800AB6E73 /* Main.storyboard */,
 				59B529671B9F0F8100E6D275 /* UDPWOLServer.h */,
 				59B529681B9F0F8100E6D275 /* UDPWOLServer.m */,
-				59AC018D1B9F04D800AB6E73 /* Assets.xcassets */,
-				59AC018F1B9F04D800AB6E73 /* Main.storyboard */,
-				59AC01921B9F04D800AB6E73 /* Info.plist */,
-				59AC01871B9F04D800AB6E73 /* Supporting Files */,
+				59AC018A1B9F04D800AB6E73 /* ViewController.h */,
+				59AC018B1B9F04D800AB6E73 /* ViewController.m */,
 			);
-			name = UDPWOLTest;
-			path = TCPTest;
+			path = UDPWOLTest;
 			sourceTree = "<group>";
 		};
 		59AC01871B9F04D800AB6E73 /* Supporting Files */ = {
@@ -216,7 +215,7 @@
 				592872161B9F417C00E59298 /* UDPWOLTestPrefixHeader.pch */,
 				59AC01881B9F04D800AB6E73 /* main.m */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		59B2A2361B6A80F200CA1708 /* WOL */ = {
@@ -551,6 +550,7 @@
 				59AC01901B9F04D800AB6E73 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -725,12 +725,12 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = TCPTest/UDPWOLTestPrefixHeader.pch;
+				GCC_PREFIX_HEADER = "UDPWOLTest/Supporting Files/UDPWOLTestPrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = TCPTest/Info.plist;
+				INFOPLIST_FILE = UDPWOLTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.clementpadovani.UDPWOLTest;
@@ -745,8 +745,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = TCPTest/UDPWOLTestPrefixHeader.pch;
-				INFOPLIST_FILE = TCPTest/Info.plist;
+				GCC_PREFIX_HEADER = "UDPWOLTest/Supporting Files/UDPWOLTestPrefixHeader.pch";
+				INFOPLIST_FILE = UDPWOLTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.clementpadovani.UDPWOLTest;
