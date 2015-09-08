@@ -58,16 +58,11 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 	//00:D0:4B:8D:A3:38
 	
 	if([*partialStringPtr length] > kWOLMACAddressFormatterMACAddressLength) {
-		NSLog(@"too long");
 		*error = @"MAC Adress is too long.";
 //		*partialStringPtr = origString;
 		NSBeep();
 		return NO;
 	}
-	
-	NSLog(@"partial: %@", *partialStringPtr);
-	
-	NSLog(@"old: %@", origString);
 	
 	if ([origString length] > [*partialStringPtr length])
 		return YES;
@@ -79,10 +74,6 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 	
 	NSString *lastCharacterString = [*partialStringPtr substringWithRange: NSMakeRange([*partialStringPtr length] - 1,  1)];
 	
-	NSLog(@"stripped: %lu", [strippedString length]);
-	
-	NSLog(@"last char: %@", lastCharacterString);
-	
 	BOOL isValid = YES;
 	
 	BOOL didAddCharacter = NO;
@@ -91,8 +82,6 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 	    ([strippedString length] % 2 == 0) &&
 	    ([strippedString length] < 12))
 	{
-		NSLog(@"do update");
-		
 		updatedString = [updatedString stringByAppendingString: @":"];
 		
 		isValid = NO;
@@ -104,6 +93,17 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 	    didAddCharacter)
 	{
 		proposedSelRangePtr->location += 1;
+	}
+	
+	BOOL needsUppercase = NO;
+
+	needsUppercase = ![lastCharacterString isEqualToString: [lastCharacterString uppercaseString]];
+	
+	if (needsUppercase)
+	{
+		isValid = NO;
+		
+		updatedString = [updatedString uppercaseString];
 	}
 	
 	*partialStringPtr = updatedString;
