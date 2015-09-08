@@ -137,6 +137,7 @@
 				598DDBC71B6A7F20009052F6 /* Resources */,
 				4A910D55C143B73F2FEFACE8 /* Embed Pods Frameworks */,
 				73E7365774C4E2C5E1D5CFBB /* Copy Pods Resources */,
+				592402CA1B9EE3F500954AC1 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -232,6 +233,20 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		592402CA1B9EE3F500954AC1 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"Release\" = \"${CONFIGURATION}\" ]; then\n\necho \"running\"\n\n\"${PODS_ROOT}/Fabric-OSX/Fabric.framework/run\" 9dfaba5dced813ed66e1f2291c22464b97fe3be3 9b9ce5921627b461c0347829020735887526444b662d5db383e852f43e932b00\n\nfi";
+		};
 		73E7365774C4E2C5E1D5CFBB /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -304,8 +319,8 @@
 				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
 					"$(inherited)",
+					"DEBUG=1",
 				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
@@ -345,6 +360,10 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"RELEASE=1",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
