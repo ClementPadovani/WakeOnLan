@@ -8,28 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		3899673810F9EF40497C6D5B /* libPods-UDPWOLTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DAF09C635E4ACBEB5009951 /* libPods-UDPWOLTest.a */; };
-		482CBE01B8BDEA8D45710DC2 /* libPods-UDPWOLTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18812D1C69E8ACE66DDDA2A2 /* libPods-UDPWOLTestTests.a */; };
 		592C282D1B6BB5BA009DE88D /* WOLwol.c in Sources */ = {isa = PBXBuildFile; fileRef = 592C282B1B6BB5BA009DE88D /* WOLwol.c */; };
 		592C28301B6BB627009DE88D /* WOLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C282F1B6BB627009DE88D /* WOLAppDelegate.m */; };
 		592C28331B6BB679009DE88D /* WOLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C28321B6BB679009DE88D /* WOLViewController.m */; };
 		592C28361B6BBFBD009DE88D /* WOLMACAddressFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C28351B6BBFBD009DE88D /* WOLMACAddressFormatter.m */; };
-		5961CBC61B9F314300D539A8 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5961CBC51B9F314300D539A8 /* XCTest.framework */; settings = {ASSET_TAGS = (); }; };
 		598DDBD11B6A7F20009052F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 598DDBD01B6A7F20009052F6 /* main.m */; };
 		598DDBD61B6A7F20009052F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBD51B6A7F20009052F6 /* Assets.xcassets */; };
 		598DDBD91B6A7F20009052F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBD71B6A7F20009052F6 /* Main.storyboard */; };
+		59A92E441B9F3ACF001B1985 /* UDPWOLActualTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A92E431B9F3ACF001B1985 /* UDPWOLActualTests.m */; };
+		59A92E4B1B9F3B42001B1985 /* WOLwol.c in Sources */ = {isa = PBXBuildFile; fileRef = 592C282B1B6BB5BA009DE88D /* WOLwol.c */; settings = {ASSET_TAGS = (); }; };
 		59AC01861B9F04D800AB6E73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC01851B9F04D800AB6E73 /* AppDelegate.m */; };
 		59AC01891B9F04D800AB6E73 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC01881B9F04D800AB6E73 /* main.m */; };
 		59AC018C1B9F04D800AB6E73 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC018B1B9F04D800AB6E73 /* ViewController.m */; };
 		59AC018E1B9F04D800AB6E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AC018D1B9F04D800AB6E73 /* Assets.xcassets */; };
 		59AC01911B9F04D800AB6E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59AC018F1B9F04D800AB6E73 /* Main.storyboard */; };
 		59B529691B9F0F8100E6D275 /* UDPWOLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B529681B9F0F8100E6D275 /* UDPWOLServer.m */; settings = {ASSET_TAGS = (); }; };
-		59B5297C1B9F1B2D00E6D275 /* UDPWOLServerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B5296A1B9F100A00E6D275 /* UDPWOLServerSpec.m */; settings = {ASSET_TAGS = (); }; };
-		59EA6F2F1B9F243A00D10D40 /* WOLwol.c in Sources */ = {isa = PBXBuildFile; fileRef = 592C282B1B6BB5BA009DE88D /* WOLwol.c */; settings = {ASSET_TAGS = (); }; };
 		70384D3C4D9EB9FFBFB68E76 /* libPods-WakeOnLan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B51891E3C77B181287EB7E6 /* libPods-WakeOnLan.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		59B529771B9F1B2500E6D275 /* PBXContainerItemProxy */ = {
+		59A92E461B9F3ACF001B1985 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 598DDBC11B6A7F20009052F6 /* Project object */;
 			proxyType = 1;
@@ -61,6 +59,9 @@
 		598DDBD81B6A7F20009052F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		598DDBDA1B6A7F20009052F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		598DDBE01B6A7FC1009052F6 /* WakeOnLan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WakeOnLan.entitlements; sourceTree = "<group>"; };
+		59A92E411B9F3ACF001B1985 /* UDPWOLActualTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UDPWOLActualTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		59A92E431B9F3ACF001B1985 /* UDPWOLActualTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDPWOLActualTests.m; sourceTree = "<group>"; };
+		59A92E451B9F3ACF001B1985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59AC01821B9F04D800AB6E73 /* UDPWOLTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UDPWOLTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59AC01841B9F04D800AB6E73 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		59AC01851B9F04D800AB6E73 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,9 +73,6 @@
 		59AC01921B9F04D800AB6E73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59B529671B9F0F8100E6D275 /* UDPWOLServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDPWOLServer.h; sourceTree = "<group>"; };
 		59B529681B9F0F8100E6D275 /* UDPWOLServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPWOLServer.m; sourceTree = "<group>"; };
-		59B5296A1B9F100A00E6D275 /* UDPWOLServerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UDPWOLServerSpec.m; path = ../TCPTest/UDPWOLServerSpec.m; sourceTree = "<group>"; };
-		59B529721B9F1B2500E6D275 /* UDPWOLTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UDPWOLTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		59B529761B9F1B2500E6D275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59DC8F2C1B9EFF4500213180 /* WOLPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WOLPrefixHeader.pch; sourceTree = "<group>"; };
 		6581E4BE60B9D646E8D4D3A6 /* libPods-TCPTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCPTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C386812AA1F7CEB81AFCBAD0 /* Pods-WakeOnLan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeOnLan.release.xcconfig"; path = "Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,20 +90,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		59A92E3E1B9F3ACF001B1985 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59AC017F1B9F04D800AB6E73 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3899673810F9EF40497C6D5B /* libPods-UDPWOLTest.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59B5296F1B9F1B2500E6D275 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				482CBE01B8BDEA8D45710DC2 /* libPods-UDPWOLTestTests.a in Frameworks */,
-				5961CBC61B9F314300D539A8 /* XCTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +143,7 @@
 			children = (
 				598DDBCB1B6A7F20009052F6 /* WakeOnLan */,
 				59AC01831B9F04D800AB6E73 /* UDPWOLTest */,
-				59B529731B9F1B2500E6D275 /* UDPWOLTestTests */,
+				59A92E421B9F3ACF001B1985 /* UDPWOLActualTests */,
 				42769041D79F58751A595DBD /* Frameworks */,
 				C6167750D4AFE4C5EAE24BF5 /* Pods */,
 				598DDBCA1B6A7F20009052F6 /* Products */,
@@ -159,7 +155,7 @@
 			children = (
 				598DDBC91B6A7F20009052F6 /* WakeOnLan.app */,
 				59AC01821B9F04D800AB6E73 /* UDPWOLTest.app */,
-				59B529721B9F1B2500E6D275 /* UDPWOLTestTests.xctest */,
+				59A92E411B9F3ACF001B1985 /* UDPWOLActualTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -188,6 +184,15 @@
 				598DDBD01B6A7F20009052F6 /* main.m */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59A92E421B9F3ACF001B1985 /* UDPWOLActualTests */ = {
+			isa = PBXGroup;
+			children = (
+				59A92E431B9F3ACF001B1985 /* UDPWOLActualTests.m */,
+				59A92E451B9F3ACF001B1985 /* Info.plist */,
+			);
+			path = UDPWOLActualTests;
 			sourceTree = "<group>";
 		};
 		59AC01831B9F04D800AB6E73 /* UDPWOLTest */ = {
@@ -223,15 +228,6 @@
 				592C282C1B6BB5BA009DE88D /* WOLwol.h */,
 			);
 			path = WOL;
-			sourceTree = "<group>";
-		};
-		59B529731B9F1B2500E6D275 /* UDPWOLTestTests */ = {
-			isa = PBXGroup;
-			children = (
-				59B5296A1B9F100A00E6D275 /* UDPWOLServerSpec.m */,
-				59B529761B9F1B2500E6D275 /* Info.plist */,
-			);
-			path = UDPWOLTestTests;
 			sourceTree = "<group>";
 		};
 		C6167750D4AFE4C5EAE24BF5 /* Pods */ = {
@@ -273,6 +269,24 @@
 			productReference = 598DDBC91B6A7F20009052F6 /* WakeOnLan.app */;
 			productType = "com.apple.product-type.application";
 		};
+		59A92E401B9F3ACF001B1985 /* UDPWOLActualTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 59A92E4A1B9F3ACF001B1985 /* Build configuration list for PBXNativeTarget "UDPWOLActualTests" */;
+			buildPhases = (
+				59A92E3D1B9F3ACF001B1985 /* Sources */,
+				59A92E3E1B9F3ACF001B1985 /* Frameworks */,
+				59A92E3F1B9F3ACF001B1985 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59A92E471B9F3ACF001B1985 /* PBXTargetDependency */,
+			);
+			name = UDPWOLActualTests;
+			productName = UDPWOLActualTests;
+			productReference = 59A92E411B9F3ACF001B1985 /* UDPWOLActualTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		59AC01811B9F04D800AB6E73 /* UDPWOLTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 59AC01951B9F04D800AB6E73 /* Build configuration list for PBXNativeTarget "UDPWOLTest" */;
@@ -292,27 +306,6 @@
 			productName = TCPTest;
 			productReference = 59AC01821B9F04D800AB6E73 /* UDPWOLTest.app */;
 			productType = "com.apple.product-type.application";
-		};
-		59B529711B9F1B2500E6D275 /* UDPWOLTestTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 59B529791B9F1B2500E6D275 /* Build configuration list for PBXNativeTarget "UDPWOLTestTests" */;
-			buildPhases = (
-				82FCA1BEE1A1C462057797C2 /* Check Pods Manifest.lock */,
-				59B5296E1B9F1B2500E6D275 /* Sources */,
-				59B5296F1B9F1B2500E6D275 /* Frameworks */,
-				59B529701B9F1B2500E6D275 /* Resources */,
-				60E1015A3CE97C4B911C18D8 /* Embed Pods Frameworks */,
-				71B639B4C7583AF91C08AE57 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				59B529781B9F1B2500E6D275 /* PBXTargetDependency */,
-			);
-			name = UDPWOLTestTests;
-			productName = UDPWOLTestTests;
-			productReference = 59B529721B9F1B2500E6D275 /* UDPWOLTestTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -336,6 +329,10 @@
 							};
 						};
 					};
+					59A92E401B9F3ACF001B1985 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 59AC01811B9F04D800AB6E73;
+					};
 					59AC01811B9F04D800AB6E73 = {
 						CreatedOnToolsVersion = 7.0;
 						SystemCapabilities = {
@@ -343,10 +340,6 @@
 								enabled = 0;
 							};
 						};
-					};
-					59B529711B9F1B2500E6D275 = {
-						CreatedOnToolsVersion = 7.0;
-						TestTargetID = 59AC01811B9F04D800AB6E73;
 					};
 				};
 			};
@@ -365,7 +358,7 @@
 			targets = (
 				598DDBC81B6A7F20009052F6 /* WakeOnLan */,
 				59AC01811B9F04D800AB6E73 /* UDPWOLTest */,
-				59B529711B9F1B2500E6D275 /* UDPWOLTestTests */,
+				59A92E401B9F3ACF001B1985 /* UDPWOLActualTests */,
 			);
 		};
 /* End PBXProject section */
@@ -380,19 +373,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		59A92E3F1B9F3ACF001B1985 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59AC01801B9F04D800AB6E73 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				59AC018E1B9F04D800AB6E73 /* Assets.xcassets in Resources */,
 				59AC01911B9F04D800AB6E73 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		59B529701B9F1B2500E6D275 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,36 +466,6 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UDPWOLTest/Pods-UDPWOLTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		60E1015A3CE97C4B911C18D8 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UDPWOLTestTests/Pods-UDPWOLTestTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		71B639B4C7583AF91C08AE57 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-UDPWOLTestTests/Pods-UDPWOLTestTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		73E7365774C4E2C5E1D5CFBB /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -516,21 +479,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		82FCA1BEE1A1C462057797C2 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		A72BC3D844FB7665C73884EE /* Copy Pods Resources */ = {
@@ -563,6 +511,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		59A92E3D1B9F3ACF001B1985 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				59A92E441B9F3ACF001B1985 /* UDPWOLActualTests.m in Sources */,
+				59A92E4B1B9F3B42001B1985 /* WOLwol.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		59AC017E1B9F04D800AB6E73 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -574,22 +531,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		59B5296E1B9F1B2500E6D275 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				59EA6F2F1B9F243A00D10D40 /* WOLwol.c in Sources */,
-				59B5297C1B9F1B2D00E6D275 /* UDPWOLServerSpec.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		59B529781B9F1B2500E6D275 /* PBXTargetDependency */ = {
+		59A92E471B9F3ACF001B1985 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 59AC01811B9F04D800AB6E73 /* UDPWOLTest */;
-			targetProxy = 59B529771B9F1B2500E6D275 /* PBXContainerItemProxy */;
+			targetProxy = 59A92E461B9F3ACF001B1985 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -742,6 +690,39 @@
 			};
 			name = Release;
 		};
+		59A92E481B9F3ACF001B1985 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = UDPWOLActualTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clementpadovani.UDPWOLActualTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UDPWOLTest.app/Contents/MacOS/UDPWOLTest";
+			};
+			name = Debug;
+		};
+		59A92E491B9F3ACF001B1985 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = UDPWOLActualTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.clementpadovani.UDPWOLActualTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UDPWOLTest.app/Contents/MacOS/UDPWOLTest";
+			};
+			name = Release;
+		};
 		59AC01931B9F04D800AB6E73 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0F379F57538138F64ABCCD6F /* Pods-UDPWOLTest.debug.xcconfig */;
@@ -777,41 +758,6 @@
 			};
 			name = Release;
 		};
-		59B5297A1B9F1B2500E6D275 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F1661ACA246712056BAD5DE /* Pods-UDPWOLTestTests.debug.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = UDPWOLTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.clementpadovani.UDPWOLTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UDPWOLTest.app/Contents/MacOS/UDPWOLTest";
-			};
-			name = Debug;
-		};
-		59B5297B1B9F1B2500E6D275 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 124AA3EA252B50404ECCD6EE /* Pods-UDPWOLTestTests.release.xcconfig */;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = UDPWOLTestTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.clementpadovani.UDPWOLTestTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UDPWOLTest.app/Contents/MacOS/UDPWOLTest";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -833,20 +779,19 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		59A92E4A1B9F3ACF001B1985 /* Build configuration list for PBXNativeTarget "UDPWOLActualTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				59A92E481B9F3ACF001B1985 /* Debug */,
+				59A92E491B9F3ACF001B1985 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		59AC01951B9F04D800AB6E73 /* Build configuration list for PBXNativeTarget "UDPWOLTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				59AC01931B9F04D800AB6E73 /* Debug */,
 				59AC01941B9F04D800AB6E73 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		59B529791B9F1B2500E6D275 /* Build configuration list for PBXNativeTarget "UDPWOLTestTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				59B5297A1B9F1B2500E6D275 /* Debug */,
-				59B5297B1B9F1B2500E6D275 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -38,6 +38,16 @@
                ReferencedContainer = "container:WakeOnLan.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "59A92E401B9F3ACF001B1985"
+               BuildableName = "UDPWOLActualTests.xctest"
+               BlueprintName = "UDPWOLActualTests"
+               ReferencedContainer = "container:WakeOnLan.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference

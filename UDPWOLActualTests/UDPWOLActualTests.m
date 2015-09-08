@@ -1,9 +1,9 @@
 //
-//  UDPWOLServerSpec.m
-//  WakeOnLan
+//  UDPWOLActualTests.m
+//  UDPWOLActualTests
 //
 //  Created by Clément Padovani on 9/8/15.
-//  Copyright 2015 Clément Padovani. All rights reserved.
+//  Copyright © 2015 Clément Padovani. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
@@ -16,23 +16,27 @@
 
 #import "WOLwol.h"
 
-
-@interface UDPWOLServerSpec : XCTestCase
+@interface UDPWOLActualTests : XCTestCase
 
 @end
 
-@implementation UDPWOLServerSpec
+@implementation UDPWOLActualTests
+
+
 
 
 
 - (void) setUp
 {
+	[super setUp];
+	
 	[[UDPWOLServer sharedServer] setup];
 }
 
 - (void) tearDown
 {
-//	[[UDPWOLServer sharedServer] tearDown];
+	[super tearDown];
+	//	[[UDPWOLServer sharedServer] tearDown];
 }
 
 - (NSString *) MACAddress
@@ -130,54 +134,56 @@
 	XCTestExpectation *expectation = [self expectationWithDescription: @"data"];
 	
 	UDPWOLServer *server = [UDPWOLServer sharedServer];
-
+	
 	
 	dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-
+		
 		[expectation fulfill];
-	
-	NSString *serverMACAddress = [server MACAddress];
-
+		
+		NSString *serverMACAddress = [server MACAddress];
+		
 		serverMACAddress = [serverMACAddress stringByReplacingOccurrencesOfString: @":"
 														   withString: @""];
 		
 		
 		
-	XCTAssertEqual([serverMACAddress length], 12);
-
-	XCTAssertTrue([server hasReceived]);
-	
-	NSString *receivedDataString = [server receivedDataString];
-	
-	XCTAssertNotNil(receivedDataString);
-	
-	NSString *firstBits = [receivedDataString substringToIndex: 12];
-	
-	XCTAssertTrue([firstBits isEqualToString: @"FFFFFFFFFFFF"]);
-
-	NSString *lastBits = [receivedDataString substringFromIndex: 12];
-	
-	NSString *repeatingAddress = [serverMACAddress stringByPaddingToLength: 16 * 12
-													withString: serverMACAddress
-												startingAtIndex: 0];
-
-	XCTAssertTrue([lastBits isEqualToString: repeatingAddress]);
-	
-	NSLog(@"last bits: %@", lastBits);
-	
-	NSLog(@"address: %@", repeatingAddress);
-	
-	NSLog(@"address: %@", [server MACAddress]);
-	
-	NSLog(@"data: %@", [server receivedDataString]);
-	
-	
+		XCTAssertEqual([serverMACAddress length], 12);
+		
+		XCTAssertTrue([server hasReceived]);
+		
+		NSString *receivedDataString = [server receivedDataString];
+		
+		XCTAssertNotNil(receivedDataString);
+		
+		NSString *firstBits = [receivedDataString substringToIndex: 12];
+		
+		XCTAssertTrue([firstBits isEqualToString: @"FFFFFFFFFFFF"]);
+		
+		NSString *lastBits = [receivedDataString substringFromIndex: 12];
+		
+		NSString *repeatingAddress = [serverMACAddress stringByPaddingToLength: 16 * 12
+														withString: serverMACAddress
+													startingAtIndex: 0];
+		
+		XCTAssertTrue([lastBits isEqualToString: repeatingAddress]);
+		
+		NSLog(@"last bits: %@", lastBits);
+		
+		NSLog(@"address: %@", repeatingAddress);
+		
+		NSLog(@"address: %@", [server MACAddress]);
+		
+		NSLog(@"data: %@", [server receivedDataString]);
+		
+		
 		
 	});
-
+	
 	[self waitForExpectationsWithTimeout: 6 handler: ^(NSError * _Nullable error) {
 		NSLog(@"error: %@", error);
 	}];
 }
+
+
 
 @end

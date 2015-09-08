@@ -16,8 +16,3 @@ pod 'CocoaAsyncSocket'
 
 end
 
-target 'UDPWOLTestTests', :exclusive => true do
-
-pod 'NSBundle+LoginItem'
-
-end
