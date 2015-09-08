@@ -4,9 +4,9 @@ platform :osx, '10.9'
 
 target 'WakeOnLan' do
 
-pod 'Fabric-OSX'
+pod 'Fabric-OSX', :configurations => ['Release']
 
-pod 'Crashlytics-OSX'
+pod 'Crashlytics-OSX', :configurations => ['Release']
 
 end
 
