@@ -10,7 +10,9 @@ pod 'Crashlytics-OSX', :configurations => ['Release']
 
 end
 
-target 'TCPTest' do
+target 'TCPTest', :exclusive => true do
+
+pod 'Kiwi'
 
 pod 'CocoaAsyncSocket'
 
