@@ -52,23 +52,25 @@
 {
 //	NSString *lacieMACAddress = @"00:D0:4B:8D:A3:38";
 	
-	NSString *lacieMACAddress = @"64:76:ba:8e:83:d2";
+//	NSString *lacieMACAddress = @"64:76:ba:8e:83:d2";
 	
-	lacieMACAddress = [lacieMACAddress uppercaseString];
+	NSString *deviceMACAddress = [[self macAddressTextField] stringValue];
+	
+	deviceMACAddress = [deviceMACAddress uppercaseString];
 	
 	//	NSString *port = @"4343";
 	
 	unsigned char *networkBroadcastAddress = (unsigned char *) strdup([@"255.255.255.255" UTF8String]);
 	
-	unsigned char *macAddress = (unsigned char *) strdup([lacieMACAddress UTF8String]);
+	unsigned char *macAddress = (unsigned char *) strdup([deviceMACAddress UTF8String]);
 	
-	if (send_wol_packet(networkBroadcastAddress, macAddress))
+	if (send_wol_packet(networkBroadcastAddress, macAddress, false))
 	{
 		NSLog(@"error sending WOL packet");
 	}
 	else
 	{
-		NSLog(@"sent to %@", lacieMACAddress);
+		NSLog(@"sent to %@", deviceMACAddress);
 	}
 }
 
