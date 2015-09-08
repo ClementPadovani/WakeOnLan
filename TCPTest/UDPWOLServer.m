@@ -148,6 +148,10 @@
 
 - (void) setup
 {
+	NSLog(@"setup");
+	
+	
+	
 	[self setHasReceived: NO];
 	
 	GCDAsyncUdpSocket *socket = [[GCDAsyncUdpSocket alloc] initWithDelegate: self delegateQueue: dispatch_get_main_queue()];
@@ -156,7 +160,7 @@
 	
 	[socket setDelegate: self];
 	
-	if (![socket bindToPort: 9 error: &error])
+	if (![socket bindToPort: 1025 error: &error])
 		NSLog(@"error: %@", error);
 	else
 	{
@@ -165,12 +169,18 @@
 	
 	if (![socket beginReceiving: &error])
 		NSLog(@"error: %@", error);
+	else
+	{
+		NSLog(@"started receiving");
+	}
 	
 	[self setSocket: socket];
 }
 
 - (void) tearDown
-{	
+{
+	NSLog(@"tear down");
+	
 	[[self socket] close];
 	
 	[self setSocket: nil];

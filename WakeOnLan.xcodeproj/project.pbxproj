@@ -22,8 +22,8 @@
 		59AC018E1B9F04D800AB6E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AC018D1B9F04D800AB6E73 /* Assets.xcassets */; };
 		59AC01911B9F04D800AB6E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59AC018F1B9F04D800AB6E73 /* Main.storyboard */; };
 		59B529691B9F0F8100E6D275 /* UDPWOLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B529681B9F0F8100E6D275 /* UDPWOLServer.m */; settings = {ASSET_TAGS = (); }; };
-		59B529751B9F1B2500E6D275 /* UDPWOLTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B529741B9F1B2500E6D275 /* UDPWOLTestTests.m */; };
 		59B5297C1B9F1B2D00E6D275 /* UDPWOLServerSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B5296A1B9F100A00E6D275 /* UDPWOLServerSpec.m */; settings = {ASSET_TAGS = (); }; };
+		59EA6F2F1B9F243A00D10D40 /* WOLwol.c in Sources */ = {isa = PBXBuildFile; fileRef = 592C282B1B6BB5BA009DE88D /* WOLwol.c */; settings = {ASSET_TAGS = (); }; };
 		70384D3C4D9EB9FFBFB68E76 /* libPods-WakeOnLan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B51891E3C77B181287EB7E6 /* libPods-WakeOnLan.a */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +72,6 @@
 		59B529681B9F0F8100E6D275 /* UDPWOLServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPWOLServer.m; sourceTree = "<group>"; };
 		59B5296A1B9F100A00E6D275 /* UDPWOLServerSpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UDPWOLServerSpec.m; path = ../TCPTest/UDPWOLServerSpec.m; sourceTree = "<group>"; };
 		59B529721B9F1B2500E6D275 /* UDPWOLTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UDPWOLTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		59B529741B9F1B2500E6D275 /* UDPWOLTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDPWOLTestTests.m; sourceTree = "<group>"; };
 		59B529761B9F1B2500E6D275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		59DC8F2C1B9EFF4500213180 /* WOLPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WOLPrefixHeader.pch; sourceTree = "<group>"; };
 		6581E4BE60B9D646E8D4D3A6 /* libPods-TCPTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCPTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -226,7 +225,6 @@
 			isa = PBXGroup;
 			children = (
 				59B5296A1B9F100A00E6D275 /* UDPWOLServerSpec.m */,
-				59B529741B9F1B2500E6D275 /* UDPWOLTestTests.m */,
 				59B529761B9F1B2500E6D275 /* Info.plist */,
 			);
 			path = UDPWOLTestTests;
@@ -576,8 +574,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59EA6F2F1B9F243A00D10D40 /* WOLwol.c in Sources */,
 				59B5297C1B9F1B2D00E6D275 /* UDPWOLServerSpec.m in Sources */,
-				59B529751B9F1B2500E6D275 /* UDPWOLTestTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
