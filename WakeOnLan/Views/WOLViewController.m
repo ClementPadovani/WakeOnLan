@@ -43,7 +43,7 @@
 //											 queue: [NSOperationQueue mainQueue]
 //										 usingBlock: ^(NSNotification * _Nonnull note) {
 //											
-//											 NSLog(@"notification: %@", note);
+//											 CPLog(@"notification: %@", note);
 //											 
 //										 }];
 }
@@ -66,11 +66,11 @@
 	
 	if (send_wol_packet(networkBroadcastAddress, macAddress, false))
 	{
-		NSLog(@"error sending WOL packet");
+		CPLog(@"error sending WOL packet");
 	}
 	else
 	{
-		NSLog(@"sent to %@", deviceMACAddress);
+		CPLog(@"sent to %@", deviceMACAddress);
 	}
 }
 

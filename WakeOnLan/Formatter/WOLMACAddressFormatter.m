@@ -46,7 +46,7 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 
 - (BOOL) isPartialStringValid:(NSString *__autoreleasing  _Nonnull *)partialStringPtr proposedSelectedRange:(NSRangePointer)proposedSelRangePtr originalString:(NSString *)origString originalSelectedRange:(NSRange)origSelRange errorDescription:(NSString *__autoreleasing  _Nullable *)error
 {
-//	NSLog(@"proposed: %@", NSStringFromRange(*proposedSelRangePtr));
+//	CPLog(@"proposed: %@", NSStringFromRange(*proposedSelRangePtr));
 	
 	NSRange foundRange;
 	NSCharacterSet *disallowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789:abcdefABCDEF"] invertedSet];
@@ -68,13 +68,13 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 	
 	if ([origString length] > [*partialStringPtr length])
 	{
-//		NSLog(@"proposed range: %@", NSStringFromRange(*proposedSelRangePtr));
+//		CPLog(@"proposed range: %@", NSStringFromRange(*proposedSelRangePtr));
 //		
-//		NSLog(@"selected string: %@", [*partialStringPtr substringWithRange: *proposedSelRangePtr]);
+//		CPLog(@"selected string: %@", [*partialStringPtr substringWithRange: *proposedSelRangePtr]);
 //		
-//		NSLog(@"selected string: %@", [origString substringWithRange: *proposedSelRangePtr]);
+//		CPLog(@"selected string: %@", [origString substringWithRange: *proposedSelRangePtr]);
 //		
-//		NSLog(@"string: %@", [origString substringWithRange: origSelRange]);
+//		CPLog(@"string: %@", [origString substringWithRange: origSelRange]);
 		
 		NSString *deletedString = [origString substringWithRange: origSelRange];
 		
@@ -85,7 +85,7 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 		if (remainingString &&
 		    [remainingString length])
 		{
-//			NSLog(@"has string");
+//			CPLog(@"has string");
 			
 			*partialStringPtr = beginningString;
 			
@@ -98,7 +98,7 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 		{
 			NSString *updatedString = [origString substringToIndex: origSelRange.location - 1];
 			
-//			NSLog(@"updated: %@", updatedString);
+//			CPLog(@"updated: %@", updatedString);
 			
 			*partialStringPtr = updatedString;
 			
@@ -128,7 +128,7 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 											   options: NSStringEnumerationByComposedCharacterSequences
 											usingBlock: ^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
 												
-//												NSLog(@"char: %@", substring);
+//												CPLog(@"char: %@", substring);
 												
 												if (currentIndex != 0 &&
 												    currentIndex % 2 == 0)
@@ -210,9 +210,9 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 //		return(NO);
 //	}
 //	
-//	NSLog(@"partial: %@", partialString);
+//	CPLog(@"partial: %@", partialString);
 //	
-//	NSLog(@"new: %@", *newString);
+//	CPLog(@"new: %@", *newString);
 //	
 //	NSString *strippedString = [partialString stringByReplacingOccurrencesOfString: @":"
 //														   withString: @""];
@@ -221,16 +221,16 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 //	
 //	NSString *lastCharacterString = [partialString substringWithRange: NSMakeRange([partialString length] - 1,  1)];
 //
-//	NSLog(@"stripped: %lu", [strippedString length]);
+//	CPLog(@"stripped: %lu", [strippedString length]);
 //	
-//	NSLog(@"last char: %@", lastCharacterString);
+//	CPLog(@"last char: %@", lastCharacterString);
 //	
 //	BOOL isValid = YES;
 //	
 //	if ((![lastCharacterString isEqualToString: @":"]) &&
 //	    ([strippedString length] % 2 == 0))
 //	{
-//		NSLog(@"do update");
+//		CPLog(@"do update");
 //		
 //		updatedString = [updatedString stringByAppendingString: @":"];
 //		
@@ -250,9 +250,9 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 //		![origString length]))
 //		return YES;
 //	
-//	NSLog(@"partial: %@", *partialStringPtr);
+//	CPLog(@"partial: %@", *partialStringPtr);
 //
-//	NSLog(@"ori: %@", origString);
+//	CPLog(@"ori: %@", origString);
 //	
 //	if ([*partialStringPtr length] >= kWOLMACAddressFormatterMACAddressLength)
 //	{
@@ -270,7 +270,7 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 //		return NO;
 //	}
 //	
-//	NSLog(@"new");
+//	CPLog(@"new");
 //	
 //	NSString *tempString = [*partialStringPtr copy];
 //	
@@ -278,18 +278,18 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 //	
 //	NSUInteger stringLength = [tempString length];
 //	
-//	NSLog(@"partial: %@", *partialStringPtr);
+//	CPLog(@"partial: %@", *partialStringPtr);
 //	
-//	NSLog(@"ori: %@", origString);
+//	CPLog(@"ori: %@", origString);
 //	
 //	if (stringLength % 2 == 0 &&
 //	    ![[*partialStringPtr substringFromIndex: ([*partialStringPtr length] - 1)] isEqualToString: @":"])
 //	{
-//		NSLog(@"substring: %@", [*partialStringPtr substringToIndex: [*partialStringPtr length] - 1]);
+//		CPLog(@"substring: %@", [*partialStringPtr substringToIndex: [*partialStringPtr length] - 1]);
 //		
-//		NSLog(@"other: %@", [*partialStringPtr substringFromIndex: [*partialStringPtr length] - 1]);
+//		CPLog(@"other: %@", [*partialStringPtr substringFromIndex: [*partialStringPtr length] - 1]);
 //		
-//		NSLog(@"fail here");
+//		CPLog(@"fail here");
 //		
 //		*partialStringPtr = [*partialStringPtr stringByAppendingString: @":"];
 //		
@@ -310,11 +310,11 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 //								 options: NSStringEnumerationByComposedCharacterSequences
 //							   usingBlock: ^(NSString * _Nullable substring, NSRange substringRange, NSRange enclosingRange, BOOL * _Nonnull stop) {
 //								   
-//								   //								   NSLog(@"char: %@", substring);
+//								   //								   CPLog(@"char: %@", substring);
 //								   
 //								   if ([substring rangeOfCharacterFromSet: [self macAddressCharacterSet] options: NSCaseInsensitiveSearch].location == NSNotFound)
 //								   {
-//									   NSLog(@"found bad chars: %@", substring);
+//									   CPLog(@"found bad chars: %@", substring);
 //									   
 //									   foundBadCharacters = YES;
 //									   *stop = YES;
@@ -326,10 +326,10 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 //								   }
 //							   }];
 //		
-//		//		NSLog(@"chars: %@", aComponent);
+//		//		CPLog(@"chars: %@", aComponent);
 //		if (foundBadCharacters)
 //		{
-//			NSLog(@"found bad char");
+//			CPLog(@"found bad char");
 //			
 //			*partialStringPtr = [origString copy];
 //			
@@ -362,7 +362,7 @@ static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 
 - (NSString *) stringForObjectValue: (nonnull id) obj
 {
-	//	NSLog(@"object: %@", obj);
+	//	CPLog(@"object: %@", obj);
 	
 	return [obj description];
 }
