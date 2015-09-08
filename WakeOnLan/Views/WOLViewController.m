@@ -50,7 +50,11 @@
 
 - (IBAction) performSendWOLPacket: (NSButton *) sender
 {
-	NSString *lacieMACAddress = @"00:D0:4B:8D:A3:38";
+//	NSString *lacieMACAddress = @"00:D0:4B:8D:A3:38";
+	
+	NSString *lacieMACAddress = @"64:76:ba:8e:83:d2";
+	
+	lacieMACAddress = [lacieMACAddress uppercaseString];
 	
 	//	NSString *port = @"4343";
 	
@@ -61,6 +65,10 @@
 	if (send_wol_packet(networkBroadcastAddress, macAddress))
 	{
 		NSLog(@"error sending WOL packet");
+	}
+	else
+	{
+		NSLog(@"sent to %@", lacieMACAddress);
 	}
 }
 

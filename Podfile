@@ -10,3 +10,9 @@ pod 'Crashlytics-OSX', :configurations => ['Release']
 
 end
 
+target 'UDPWOLTest', :exclusive => true do
+
+pod 'CocoaAsyncSocket'
+
+end
+
