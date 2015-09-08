@@ -51,7 +51,7 @@ int hex2(unsigned char *p) {
 	return c | i;
 }
 
-int send_wol_packet(unsigned char *broadcast_addr, unsigned char *mac_addr)
+int send_wol_packet(unsigned char *broadcast_addr, unsigned char *mac_addr, bool isDebug)
 {
 	int sd;
 	int optval;
@@ -65,7 +65,14 @@ int send_wol_packet(unsigned char *broadcast_addr, unsigned char *mac_addr)
 	bzero((char *)&sin, sizeof(sin));
 	sin.sin_family = AF_INET;
 	host2addr((char *)broadcast_addr, &sin.sin_addr, &sin.sin_family);
+	
 	sin.sin_port = htons(9);
+	
+	if (isDebug)
+	{
+		printf("is debug");
+		sin.sin_port = htons(1025);
+	}
 	
 	if ((sd = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP)) < 0) {
 		fprintf(stderr, "Can't get socket.\n");

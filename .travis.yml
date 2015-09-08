@@ -1,0 +1,6 @@
+language: objective-c
+osx_image: xcode7
+before_install:
+    - gem install cocoapods --no-rdoc --no-ri --no-document --quiet
+xcode_workspace: WakeOnLan.xcworkspace
+xcode_scheme: UDPWOLTest
