@@ -20,6 +20,4 @@ target 'UDPWOLTestTests', :exclusive => true do
 
 pod 'Kiwi'
 
-pod 'CocoaAsyncSocket'
-
 end
