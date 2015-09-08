@@ -596,7 +596,6 @@
 		};
 		59AC01931B9F04D800AB6E73 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA012EBB9CBAB00E539C8FD9 /* Pods-TCPTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -616,7 +615,6 @@
 		};
 		59AC01941B9F04D800AB6E73 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FF260C3838472D282F6DB61A /* Pods-TCPTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
