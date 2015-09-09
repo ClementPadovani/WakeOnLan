@@ -1,14 +1,14 @@
 //
-//  WOLManagedObject.m
+//  WOLBaseObject.m
 //  WakeOnLan
 //
 //  Created by Clément Padovani on 9/9/15.
 //  Copyright © 2015 Clément Padovani. All rights reserved.
 //
 
-#import "WOLManagedObject.h"
+#import "WOLBaseObject.h"
 
-@implementation WOLManagedObject
+@implementation WOLBaseObject
 
 + (NSString *) entityName
 {

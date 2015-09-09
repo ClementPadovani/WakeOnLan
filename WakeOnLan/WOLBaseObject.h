@@ -1,5 +1,5 @@
 //
-//  WOLManagedObject.h
+//  WOLBaseObject.h
 //  WakeOnLan
 //
 //  Created by Clément Padovani on 9/9/15.
@@ -8,7 +8,7 @@
 
 @import CoreData;
 
-@interface WOLManagedObject : NSManagedObject
+@interface WOLBaseObject : NSManagedObject
 
 + (NSString *) entityName;
 
