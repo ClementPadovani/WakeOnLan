@@ -24,6 +24,8 @@
 
 @property (strong) SNRFetchedResultsController *fetchedResultsController;
 
+@property (weak) IBOutlet WOLViewController *mainViewController;
+
 @end
 
 
