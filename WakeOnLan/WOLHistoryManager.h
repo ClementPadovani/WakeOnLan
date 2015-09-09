@@ -8,11 +8,15 @@
 
 @import Foundation;
 
+@import CoreData;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface WOLHistoryManager : NSObject
 
 + (instancetype) sharedManager;
+
+@property (nonatomic, strong, readonly) NSManagedObjectContext *importContext;
 
 @end
 

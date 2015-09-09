@@ -20,6 +20,8 @@
 
 @property (nonatomic, strong) NSManagedObjectContext *mainContext;
 
+@property (nonatomic, strong, readwrite) NSManagedObjectContext *importContext;
+
 @end
 
 @implementation WOLHistoryManager
@@ -112,6 +114,25 @@
 	}
 	
 	return _mainContext;
+}
+
+- (NSManagedObjectContext *) importContext
+{
+	if (!_importContext)
+	{
+		NSManagedObjectContext *importContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSPrivateQueueConcurrencyType];
+		
+		if ([importContext respondsToSelector: @selector(setName:)])
+		{
+			[importContext setName: @"Import Context"];
+		}
+		
+		[importContext setParentContext: [self mainContext]];
+		
+		_importContext = importContext;
+	}
+	
+	return _importContext;
 }
 
 - (NSURL *) applicationDocumentsDirectory
