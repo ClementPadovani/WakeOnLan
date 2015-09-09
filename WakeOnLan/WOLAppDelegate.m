@@ -61,19 +61,24 @@
 		
 		[NSApp presentError: fetchError];
 	}
+	
+	[self setFetchedResultsController: fetchedResultsController];
+	
+	[self controllerDidChangeContent: fetchedResultsController];
 }
 
 - (void) controllerDidChangeContent: (SNRFetchedResultsController *) controller
 {
-	NSMenu *historyMenu = [[self historyMenuItem] menu];
+	NSMenu *historyMenu = [[self historyMenuItem] submenu];
 	
 	[historyMenu removeAllItems];
 	
 	for (WOLHistoryItem *aHistoryItem in [controller fetchedObjects])
 	{
 		NSMenuItem *menuItem = [[NSMenuItem alloc] initWithTitle: [aHistoryItem macAddress]
-												action: NULL
+												action: @selector(userDidChooseHistoryItem:)
 										   keyEquivalent: @""];
+		[menuItem setTarget: self];
 		
 		[historyMenu addItem: menuItem];
 	}
@@ -89,6 +94,15 @@
 		
 		[historyMenu addItem: noItemsMenuItem];
 	}
+}
+
+- (void) userDidChooseHistoryItem: (id) sender
+{
+	NSMenuItem *historyMenuItem = sender;
+	
+	NSParameterAssert([historyMenuItem isKindOfClass: [NSMenuItem class]]);
+	
+	
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed: (nonnull NSApplication *) sender

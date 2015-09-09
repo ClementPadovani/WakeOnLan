@@ -6,8 +6,10 @@
 //  Copyright © 2015 Clément Padovani. All rights reserved.
 //
 
-#import <Cocoa/Cocoa.h>
+@import Cocoa;
 
 @interface WOLViewController : NSViewController
+
+- (void) doWakeUpClientWithMACAddress: (NSString * __nonnull) clientMacAddress;
 
 @end

@@ -73,6 +73,13 @@
 		[self performSendWOLPacket: nil];
 }
 
+- (void) doWakeUpClientWithMACAddress: (NSString * __nonnull) clientMacAddress
+{
+	[[self macAddressTextField] setStringValue: clientMacAddress];
+	
+	[self performSendWOLPacket: nil];
+}
+
 - (void) doAddMACAddress: (NSString * __nonnull) macAddress
 {
 	NSManagedObjectContext *importContext = [[WOLHistoryManager sharedManager] importContext];
@@ -98,6 +105,8 @@
 		}
 		else
 		{
+			CPLog(@"import save");
+			
 			NSManagedObjectContext *parentContext = [importContext parentContext];
 			
 			[parentContext performBlock: ^{
@@ -113,6 +122,10 @@
 						[NSApp presentError: parentSaveError];
 						
 					});
+				}
+				else
+				{
+					CPLog(@"did save");
 				}
 				
 			}];
