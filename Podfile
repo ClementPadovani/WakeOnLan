@@ -8,6 +8,8 @@ pod 'Fabric-OSX', :configurations => ['Release']
 
 pod 'Crashlytics-OSX', :configurations => ['Release']
 
+pod 'SNRFetchedResultsController'
+
 end
 
 target 'UDPWOLTest', :exclusive => true do
