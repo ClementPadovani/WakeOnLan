@@ -38,6 +38,17 @@
 	return _sharedManager;
 }
 
+- (void) persistentStoreDidImportUbiquitousDataWithNotification: (NSNotification *) notification
+{
+	CPLog(@"did import iCloud data");
+	
+	[[self mainContext] performBlock: ^{
+		
+		[[self mainContext] mergeChangesFromContextDidSaveNotification: notification];
+		
+	}];
+}
+
 - (NSManagedObjectModel *) model
 {
 	if (!_model)
@@ -111,6 +122,11 @@
 		[mainContext setPersistentStoreCoordinator: [self persistentStoreCoordinator]];
 		
 		_mainContext = mainContext;
+		
+		[[NSNotificationCenter defaultCenter] addObserver: self
+										 selector: @selector(persistentStoreDidImportUbiquitousDataWithNotification:)
+											name: NSPersistentStoreDidImportUbiquitousContentChangesNotification
+										   object: [self persistentStoreCoordinator]];
 	}
 	
 	return _mainContext;
