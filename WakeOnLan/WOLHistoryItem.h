@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WOLHistoryItem : WOLBaseObject
 
-// Insert code here to declare functionality of your managed object subclass
++ (instancetype) historyItemForMACAddress: (NSString * __nonnull) itemMACAddress inManagedObjectContext: (NSManagedObjectContext * __nonnull) managedObjectContext;
+
 
 @end
 
