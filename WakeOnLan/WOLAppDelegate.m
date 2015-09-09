@@ -108,6 +108,16 @@
 	[[self mainViewController] doWakeUpClientWithMACAddress: historyMACAddressString];
 }
 
+- (void) applicationDidResignActive: (NSNotification *) notification
+{
+	[[WOLHistoryManager sharedManager] doPerformSave];
+}
+
+- (void) applicationWillTerminate: (NSNotification *) notification
+{
+	[[WOLHistoryManager sharedManager] doPerformSave];
+}
+
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed: (nonnull NSApplication *) sender
 {
 	return YES;
