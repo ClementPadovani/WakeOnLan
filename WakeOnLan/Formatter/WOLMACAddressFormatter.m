@@ -13,7 +13,7 @@ const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 
 @interface WOLMACAddressFormatter ()
 
-@property (copy) NSCharacterSet *macAddressCharacterSet;
+@property (copy) NSCharacterSet *forbiddenMACAddressCharacterSet;
 
 @end
 
@@ -26,19 +26,9 @@ const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 	
 	if (self)
 	{
-		NSCharacterSet *hexadecimalCharacterSet = [NSCharacterSet characterSetWithCharactersInString: @"0123456789ABCDEFabcdef"];
+		NSCharacterSet *forbiddenMACAddressCharacterSet = [[NSCharacterSet characterSetWithCharactersInString: @"0123456789:abcdefABCDEF"] invertedSet];
 		
-		NSCharacterSet *seperatorCharacterSet = [NSCharacterSet characterSetWithCharactersInString: @":"];
-		
-		NSMutableCharacterSet *macAddressCharacterSet = [[NSMutableCharacterSet alloc] init];
-		
-		[macAddressCharacterSet formUnionWithCharacterSet: hexadecimalCharacterSet];
-		
-		[macAddressCharacterSet formUnionWithCharacterSet: seperatorCharacterSet];
-		
-//		[self setMacAddressCharacterSet: macAddressCharacterSet];
-		
-		_macAddressCharacterSet = [macAddressCharacterSet copy];
+		_forbiddenMACAddressCharacterSet = [forbiddenMACAddressCharacterSet copy];
 	}
 	
 	return self;
@@ -49,7 +39,8 @@ const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 //	CPLog(@"proposed: %@", NSStringFromRange(*proposedSelRangePtr));
 	
 	NSRange foundRange;
-	NSCharacterSet *disallowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:@"0123456789:abcdefABCDEF"] invertedSet];
+	NSCharacterSet *disallowedCharacters = [self forbiddenMACAddressCharacterSet];
+	
 	foundRange = [*partialStringPtr rangeOfCharacterFromSet:disallowedCharacters];
 	if(foundRange.location != NSNotFound) {
 		*error = @"MAC Adress contains invalid characters";
