@@ -692,7 +692,7 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				CODE_SIGN_ENTITLEMENTS = WakeOnLan/WakeOnLan.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -714,8 +714,8 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				CODE_SIGN_ENTITLEMENTS = WakeOnLan/WakeOnLan.entitlements;
-				CODE_SIGN_IDENTITY = "Developer ID Application: Clement Padovani (W48L6Z4654)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: Clement Padovani (W48L6Z4654)";
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "WakeOnLan/Supporting Files/WOLPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/WakeOnLan/Supporting Files/Info.plist";

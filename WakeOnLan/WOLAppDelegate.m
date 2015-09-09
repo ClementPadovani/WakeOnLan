@@ -14,7 +14,7 @@
 #import "WOLAppDelegate.h"
 #import "WOLHistoryManager.h"
 
-@import SNRFetchedResultsController;
+#import <SNRFetchedResultsController/SNRFetchedResultsController.h>
 
 #import "WOLHistoryItem.h"
 #import "WOLViewController.h"
