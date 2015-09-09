@@ -703,7 +703,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.clement.padovani.WakeOnLan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "25b8922b-9ce5-4c86-96ff-4f52aa9dd114";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -724,7 +724,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.clement.padovani.WakeOnLan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "25b8922b-9ce5-4c86-96ff-4f52aa9dd114";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
