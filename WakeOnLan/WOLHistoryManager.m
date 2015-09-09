@@ -8,6 +8,8 @@
 
 #import "WOLHistoryManager.h"
 
+@import CoreData;
+
 @interface WOLHistoryManager ()
 
 
