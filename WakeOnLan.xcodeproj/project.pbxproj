@@ -17,6 +17,8 @@
 		598DDBD91B6A7F20009052F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBD71B6A7F20009052F6 /* Main.storyboard */; };
 		59998CFD1BA04BE700349F3D /* WOLHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59998CFC1BA04BE700349F3D /* WOLHistoryManager.m */; settings = {ASSET_TAGS = (); }; };
 		59998D011BA04CDD00349F3D /* WOLHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59998CFF1BA04CDD00349F3D /* WOLHistory.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
+		59998D071BA04D5F00349F3D /* WOLHistoryItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59998D041BA04D5F00349F3D /* WOLHistoryItem+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
+		59998D081BA04D5F00349F3D /* WOLHistoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 59998D061BA04D5F00349F3D /* WOLHistoryItem.m */; settings = {ASSET_TAGS = (); }; };
 		59A92E441B9F3ACF001B1985 /* UDPWOLActualTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A92E431B9F3ACF001B1985 /* UDPWOLActualTests.m */; };
 		59A92E4B1B9F3B42001B1985 /* WOLwol.c in Sources */ = {isa = PBXBuildFile; fileRef = 592C282B1B6BB5BA009DE88D /* WOLwol.c */; settings = {ASSET_TAGS = (); }; };
 		59AC01861B9F04D800AB6E73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC01851B9F04D800AB6E73 /* AppDelegate.m */; };
@@ -63,6 +65,10 @@
 		59998CFB1BA04BE700349F3D /* WOLHistoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLHistoryManager.h; sourceTree = "<group>"; };
 		59998CFC1BA04BE700349F3D /* WOLHistoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOLHistoryManager.m; sourceTree = "<group>"; };
 		59998D001BA04CDD00349F3D /* WOLHistory.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WOLHistory.xcdatamodel; sourceTree = "<group>"; };
+		59998D031BA04D5F00349F3D /* WOLHistoryItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "WOLHistoryItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		59998D041BA04D5F00349F3D /* WOLHistoryItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WOLHistoryItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		59998D051BA04D5F00349F3D /* WOLHistoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLHistoryItem.h; sourceTree = "<group>"; };
+		59998D061BA04D5F00349F3D /* WOLHistoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOLHistoryItem.m; sourceTree = "<group>"; };
 		59A92E411B9F3ACF001B1985 /* UDPWOLActualTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UDPWOLActualTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A92E431B9F3ACF001B1985 /* UDPWOLActualTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDPWOLActualTests.m; sourceTree = "<group>"; };
 		59A92E451B9F3ACF001B1985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -202,6 +208,10 @@
 		59998D021BA04D4400349F3D /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
+				59998D031BA04D5F00349F3D /* WOLHistoryItem+CoreDataProperties.h */,
+				59998D041BA04D5F00349F3D /* WOLHistoryItem+CoreDataProperties.m */,
+				59998D051BA04D5F00349F3D /* WOLHistoryItem.h */,
+				59998D061BA04D5F00349F3D /* WOLHistoryItem.m */,
 				59998CFF1BA04CDD00349F3D /* WOLHistory.xcdatamodeld */,
 			);
 			name = "Core Data";
@@ -520,10 +530,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				59998D081BA04D5F00349F3D /* WOLHistoryItem.m in Sources */,
 				59998D011BA04CDD00349F3D /* WOLHistory.xcdatamodeld in Sources */,
 				592C28361B6BBFBD009DE88D /* WOLMACAddressFormatter.m in Sources */,
 				59998CFD1BA04BE700349F3D /* WOLHistoryManager.m in Sources */,
 				592C28301B6BB627009DE88D /* WOLAppDelegate.m in Sources */,
+				59998D071BA04D5F00349F3D /* WOLHistoryItem+CoreDataProperties.m in Sources */,
 				592C282D1B6BB5BA009DE88D /* WOLwol.c in Sources */,
 				598DDBD11B6A7F20009052F6 /* main.m in Sources */,
 				592C28331B6BB679009DE88D /* WOLViewController.m in Sources */,

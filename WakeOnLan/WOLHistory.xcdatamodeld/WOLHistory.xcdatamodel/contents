@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="8193.2" systemVersion="15A279b" minimumToolsVersion="Xcode 7.0">
-    <entity name="WOLHistoryItem" syncable="YES">
+    <entity name="WOLHistoryItem" representedClassName="WOLHistoryItem" syncable="YES">
         <attribute name="lastUsedDate" optional="YES" attributeType="Date" indexed="YES" syncable="YES"/>
         <attribute name="macAddress" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
