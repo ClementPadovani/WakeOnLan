@@ -10,4 +10,14 @@
 
 @implementation WOLManagedObject
 
++ (NSString *) entityName
+{
+	return NSStringFromClass(self);
+}
+
++ (instancetype) newEntityInManagedObjectContext: (NSManagedObjectContext *) context
+{
+	return [NSEntityDescription insertNewObjectForEntityForName: [self entityName] inManagedObjectContext: context];
+}
+
 @end

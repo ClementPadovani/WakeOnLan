@@ -10,4 +10,8 @@
 
 @interface WOLManagedObject : NSManagedObject
 
++ (NSString *) entityName;
+
++ (instancetype) newEntityInManagedObjectContext: (NSManagedObjectContext *) context;
+
 @end
