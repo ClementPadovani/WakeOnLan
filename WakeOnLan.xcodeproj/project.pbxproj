@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3899673810F9EF40497C6D5B /* libPods-UDPWOLTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DAF09C635E4ACBEB5009951 /* libPods-UDPWOLTest.a */; };
+		30B4D98517553BA07BEAED55 /* Pods_UDPWOLTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2481ABA7B7CA71E5E0E97F2A /* Pods_UDPWOLTest.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		592C282D1B6BB5BA009DE88D /* WOLwol.c in Sources */ = {isa = PBXBuildFile; fileRef = 592C282B1B6BB5BA009DE88D /* WOLwol.c */; };
 		592C28301B6BB627009DE88D /* WOLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C282F1B6BB627009DE88D /* WOLAppDelegate.m */; };
 		592C28331B6BB679009DE88D /* WOLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C28321B6BB679009DE88D /* WOLViewController.m */; };
@@ -46,7 +46,7 @@
 		0F379F57538138F64ABCCD6F /* Pods-UDPWOLTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPWOLTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UDPWOLTest/Pods-UDPWOLTest.debug.xcconfig"; sourceTree = "<group>"; };
 		18812D1C69E8ACE66DDDA2A2 /* libPods-UDPWOLTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UDPWOLTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6D9C82F3DFC2C179DC3602 /* Pods-UDPWOLTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPWOLTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-UDPWOLTest/Pods-UDPWOLTest.release.xcconfig"; sourceTree = "<group>"; };
-		2DAF09C635E4ACBEB5009951 /* libPods-UDPWOLTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UDPWOLTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2481ABA7B7CA71E5E0E97F2A /* Pods_UDPWOLTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UDPWOLTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		592872161B9F417C00E59298 /* UDPWOLTestPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDPWOLTestPrefixHeader.pch; sourceTree = "<group>"; };
 		592C282B1B6BB5BA009DE88D /* WOLwol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WOLwol.c; sourceTree = "<group>"; };
 		592C282C1B6BB5BA009DE88D /* WOLwol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLwol.h; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3899673810F9EF40497C6D5B /* libPods-UDPWOLTest.a in Frameworks */,
+				30B4D98517553BA07BEAED55 /* Pods_UDPWOLTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,9 +124,9 @@
 			children = (
 				5961CBC51B9F314300D539A8 /* XCTest.framework */,
 				6581E4BE60B9D646E8D4D3A6 /* libPods-TCPTest.a */,
-				2DAF09C635E4ACBEB5009951 /* libPods-UDPWOLTest.a */,
 				18812D1C69E8ACE66DDDA2A2 /* libPods-UDPWOLTestTests.a */,
 				0727353515D6CB718C2835C8 /* Pods_WakeOnLan.framework */,
+				2481ABA7B7CA71E5E0E97F2A /* Pods_UDPWOLTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -660,7 +660,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Clement Padovani (W48L6Z4654)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -679,6 +679,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "f1ba5e70-eeb0-4837-90b8-4ae494ead759";
 				SDKROOT = macosx;
 			};
 			name = Release;
