@@ -19,6 +19,7 @@
 		59998D011BA04CDD00349F3D /* WOLHistory.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 59998CFF1BA04CDD00349F3D /* WOLHistory.xcdatamodeld */; settings = {ASSET_TAGS = (); }; };
 		59998D071BA04D5F00349F3D /* WOLHistoryItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 59998D041BA04D5F00349F3D /* WOLHistoryItem+CoreDataProperties.m */; settings = {ASSET_TAGS = (); }; };
 		59998D081BA04D5F00349F3D /* WOLHistoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 59998D061BA04D5F00349F3D /* WOLHistoryItem.m */; settings = {ASSET_TAGS = (); }; };
+		59998D0B1BA04D9600349F3D /* WOLManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 59998D0A1BA04D9600349F3D /* WOLManagedObject.m */; settings = {ASSET_TAGS = (); }; };
 		59A92E441B9F3ACF001B1985 /* UDPWOLActualTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A92E431B9F3ACF001B1985 /* UDPWOLActualTests.m */; };
 		59A92E4B1B9F3B42001B1985 /* WOLwol.c in Sources */ = {isa = PBXBuildFile; fileRef = 592C282B1B6BB5BA009DE88D /* WOLwol.c */; settings = {ASSET_TAGS = (); }; };
 		59AC01861B9F04D800AB6E73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC01851B9F04D800AB6E73 /* AppDelegate.m */; };
@@ -69,6 +70,8 @@
 		59998D041BA04D5F00349F3D /* WOLHistoryItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "WOLHistoryItem+CoreDataProperties.m"; sourceTree = "<group>"; };
 		59998D051BA04D5F00349F3D /* WOLHistoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLHistoryItem.h; sourceTree = "<group>"; };
 		59998D061BA04D5F00349F3D /* WOLHistoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOLHistoryItem.m; sourceTree = "<group>"; };
+		59998D091BA04D9600349F3D /* WOLManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLManagedObject.h; sourceTree = "<group>"; };
+		59998D0A1BA04D9600349F3D /* WOLManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOLManagedObject.m; sourceTree = "<group>"; };
 		59A92E411B9F3ACF001B1985 /* UDPWOLActualTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UDPWOLActualTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A92E431B9F3ACF001B1985 /* UDPWOLActualTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDPWOLActualTests.m; sourceTree = "<group>"; };
 		59A92E451B9F3ACF001B1985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -213,6 +216,8 @@
 				59998D051BA04D5F00349F3D /* WOLHistoryItem.h */,
 				59998D061BA04D5F00349F3D /* WOLHistoryItem.m */,
 				59998CFF1BA04CDD00349F3D /* WOLHistory.xcdatamodeld */,
+				59998D091BA04D9600349F3D /* WOLManagedObject.h */,
+				59998D0A1BA04D9600349F3D /* WOLManagedObject.m */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -539,6 +544,7 @@
 				592C282D1B6BB5BA009DE88D /* WOLwol.c in Sources */,
 				598DDBD11B6A7F20009052F6 /* main.m in Sources */,
 				592C28331B6BB679009DE88D /* WOLViewController.m in Sources */,
+				59998D0B1BA04D9600349F3D /* WOLManagedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
