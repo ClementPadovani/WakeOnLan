@@ -18,7 +18,7 @@
 
 @property (nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
-@property (nonatomic, strong) NSManagedObjectContext *mainContext;
+@property (nonatomic, strong, readwrite) NSManagedObjectContext *mainContext;
 
 @property (nonatomic, strong, readwrite) NSManagedObjectContext *importContext;
 

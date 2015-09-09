@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (instancetype) sharedManager;
 
+@property (nonatomic, strong, readonly) NSManagedObjectContext *mainContext;
+
 @property (nonatomic, strong, readonly) NSManagedObjectContext *importContext;
 
 @end
