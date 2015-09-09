@@ -126,7 +126,11 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="sFk-1R-Kqq"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="WOLAppDelegate"/>
+                <customObject id="Voe-Tx-rLC" customClass="WOLAppDelegate">
+                    <connections>
+                        <outlet property="historyMenuItem" destination="jfI-WK-nvy" id="Kvu-dj-CS1"/>
+                    </connections>
+                </customObject>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="75" y="0.0"/>

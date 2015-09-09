@@ -13,6 +13,13 @@
 
 #import "WOLAppDelegate.h"
 
+@interface WOLAppDelegate ()
+
+@property (weak) IBOutlet NSMenuItem *historyMenuItem;
+
+@end
+
+
 @implementation WOLAppDelegate
 
 - (void) applicationDidFinishLaunching:(nonnull NSNotification *)notification
