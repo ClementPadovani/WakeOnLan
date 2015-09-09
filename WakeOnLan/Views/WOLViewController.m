@@ -11,6 +11,8 @@
 #import "WOLViewController.h"
 #import "WOLwol.h"
 #import "WOLMACAddressFormatter.h"
+#import "WOLHistoryManager.h"
+#import "WOLHistoryItem.h"
 
 @interface WOLViewController () <NSTextFieldDelegate>
 
@@ -71,6 +73,54 @@
 		[self performSendWOLPacket: nil];
 }
 
+- (void) doAddMACAddress: (NSString * __nonnull) macAddress
+{
+	NSManagedObjectContext *importContext = [[WOLHistoryManager sharedManager] importContext];
+	
+	[importContext performBlock: ^{
+		
+		WOLHistoryItem *historyItem = [WOLHistoryItem historyItemForMACAddress: macAddress
+											   inManagedObjectContext: importContext];
+		
+		[historyItem setLastUsedDate: [NSDate date]];
+		
+		NSError *importSaveError = nil;
+		
+		if (![importContext save: &importSaveError])
+		{
+			CPLog(@"import save error: %@", importSaveError);
+			
+			dispatch_async(dispatch_get_main_queue(), ^{
+				
+				[NSApp presentError: importSaveError];
+				
+			});
+		}
+		else
+		{
+			NSManagedObjectContext *parentContext = [importContext parentContext];
+			
+			[parentContext performBlock: ^{
+				
+				NSError *parentSaveError = nil;
+				
+				if (![parentContext save: &parentSaveError])
+				{
+					CPLog(@"parent save error: %@", parentSaveError);
+					
+					dispatch_async(dispatch_get_main_queue(), ^{
+						
+						[NSApp presentError: parentSaveError];
+						
+					});
+				}
+				
+			}];
+		}
+		
+	}];
+}
+
 - (IBAction) performSendWOLPacket: (NSButton *) sender
 {
 	if (![self isMACAddressValid])
@@ -83,6 +133,12 @@
 	NSString *deviceMACAddress = [[self macAddressTextField] stringValue];
 	
 	deviceMACAddress = [deviceMACAddress uppercaseString];
+	
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+		
+		[self doAddMACAddress: deviceMACAddress];
+		
+	});
 	
 	//	NSString *port = @"4343";
 	
