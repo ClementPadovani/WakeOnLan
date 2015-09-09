@@ -167,6 +167,7 @@
 			children = (
 				592C282E1B6BB627009DE88D /* WOLAppDelegate.h */,
 				592C282F1B6BB627009DE88D /* WOLAppDelegate.m */,
+				59998D021BA04D4400349F3D /* Core Data */,
 				59998CFE1BA04BEA00349F3D /* History Manager */,
 				59441CF21B9F0047006AAF11 /* Formatter */,
 				59441CF11B9F0041006AAF11 /* Views */,
@@ -194,9 +195,16 @@
 			children = (
 				59998CFB1BA04BE700349F3D /* WOLHistoryManager.h */,
 				59998CFC1BA04BE700349F3D /* WOLHistoryManager.m */,
-				59998CFF1BA04CDD00349F3D /* WOLHistory.xcdatamodeld */,
 			);
 			name = "History Manager";
+			sourceTree = "<group>";
+		};
+		59998D021BA04D4400349F3D /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				59998CFF1BA04CDD00349F3D /* WOLHistory.xcdatamodeld */,
+			);
+			name = "Core Data";
 			sourceTree = "<group>";
 		};
 		59A92E421B9F3ACF001B1985 /* UDPWOLActualTests */ = {
