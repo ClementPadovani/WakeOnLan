@@ -194,9 +194,23 @@
 	}];
 }
 
+//- (NSURL *) ubiquitousDocumentsDirectory
+//{
+//	if (![[NSFileManager defaultManager] ubiquityIdentityToken])
+//		return [self applicationDocumentsDirectory];
+//	
+//	NSURL *ubiquitousDocumentsDirectory = [[NSFileManager defaultManager] URLForUbiquityContainerIdentifier: nil];
+//	
+//	NSParameterAssert(ubiquitousDocumentsDirectory);
+//	
+//	NSParameterAssert([[ubiquitousDocumentsDirectory path] length]);
+//	
+//	return ubiquitousDocumentsDirectory;
+//}
+
 - (NSURL *) applicationDocumentsDirectory
 {
-	return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+	return [[NSFileManager defaultManager] URLForDirectory: NSDocumentDirectory inDomain: NSUserDomainMask appropriateForURL: nil create: YES error: NULL];
 }
 
 @end

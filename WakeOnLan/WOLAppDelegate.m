@@ -34,6 +34,8 @@
 
 - (void) applicationDidFinishLaunching:(nonnull NSNotification *)notification
 {
+	CPLog(@"token: %@", [[NSFileManager defaultManager] ubiquityIdentityToken]);
+	
 	#ifdef RELEASE
 		[[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"NSApplicationCrashOnExceptions": @YES }];
 	
