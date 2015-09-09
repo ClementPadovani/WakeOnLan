@@ -12,6 +12,8 @@
 #endif
 
 #import "WOLAppDelegate.h"
+#import "WOLHistoryManager.h"
+
 
 @interface WOLAppDelegate ()
 
@@ -29,6 +31,8 @@
 	
 		[Fabric with:@[[Crashlytics class]]];
 	#endif
+	
+	
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed: (nonnull NSApplication *) sender
