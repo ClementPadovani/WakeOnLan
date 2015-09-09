@@ -240,7 +240,7 @@
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="Bon-Gq-HrJ"/>
                                 </connections>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zMQ-ze-9hd">
+                            <textField hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zMQ-ze-9hd">
                                 <rect key="frame" x="220" y="50" width="40" height="17"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="center" title="Sent!" id="cuc-FW-FYw">

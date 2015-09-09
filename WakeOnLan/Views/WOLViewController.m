@@ -34,20 +34,6 @@
 	[self setMacAddressFormatter: macAddressFormatter];
 	
 	[[self macAddressTextField] setFormatter: [self macAddressFormatter]];
-	
-//	[[NSNotificationCenter defaultCenter] addObserver: self
-//									 selector: @selector(textFieldDidChange:)
-//										name: NSControlTextDidChangeNotification
-//									   object: [self macAddressTextField]];
-	
-//	[[NSNotificationCenter defaultCenter] addObserverForName: nil
-//											object: [self macAddressTextField]
-//											 queue: [NSOperationQueue mainQueue]
-//										 usingBlock: ^(NSNotification * _Nonnull note) {
-//											
-//											 CPLog(@"notification: %@", note);
-//											 
-//										 }];
 }
 
 - (BOOL) isMACAddressValid
