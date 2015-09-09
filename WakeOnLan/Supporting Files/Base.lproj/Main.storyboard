@@ -240,10 +240,21 @@
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="Bon-Gq-HrJ"/>
                                 </connections>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zMQ-ze-9hd">
+                                <rect key="frame" x="220" y="50" width="40" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" alignment="center" title="Sent!" id="cuc-FW-FYw">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
                             <constraint firstItem="rbP-gT-kkQ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="1IJ-ug-mbB"/>
+                            <constraint firstItem="zMQ-ze-9hd" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="2q6-4F-i4h"/>
                             <constraint firstItem="PDa-fY-yuf" firstAttribute="top" secondItem="rbP-gT-kkQ" secondAttribute="bottom" constant="23" id="855-qg-ohC"/>
+                            <constraint firstAttribute="bottom" secondItem="zMQ-ze-9hd" secondAttribute="bottom" constant="50" id="Geu-Ip-i5w"/>
                             <constraint firstItem="rbP-gT-kkQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="50" id="HjO-P8-mnJ"/>
                             <constraint firstItem="PDa-fY-yuf" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="Tnw-VT-3Bi"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rbP-gT-kkQ" secondAttribute="trailing" constant="50" id="VVf-SC-co8"/>
@@ -254,6 +265,7 @@
                     <connections>
                         <outlet property="macAddressTextField" destination="rbP-gT-kkQ" id="9fv-RU-A9P"/>
                         <outlet property="sendWOLPacketButton" destination="PDa-fY-yuf" id="pMn-Qp-UcY"/>
+                        <outlet property="sentLabel" destination="zMQ-ze-9hd" id="cDc-au-7Za"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

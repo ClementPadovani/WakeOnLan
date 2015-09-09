@@ -17,6 +17,8 @@
 
 @property (strong) WOLMACAddressFormatter *macAddressFormatter;
 
+@property (weak) IBOutlet NSTextField *sentLabel;
+
 @end
 
 @implementation WOLViewController
