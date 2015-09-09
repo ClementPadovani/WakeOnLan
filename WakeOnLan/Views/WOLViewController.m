@@ -6,6 +6,8 @@
 //  Copyright © 2015 Clément Padovani. All rights reserved.
 //
 
+@import QuartzCore;
+
 #import "WOLViewController.h"
 #import "WOLwol.h"
 #import "WOLMACAddressFormatter.h"
@@ -94,7 +96,43 @@
 	}
 	else
 	{
-		CPLog(@"sent to %@", deviceMACAddress);
+		[[self sentLabel] setAlphaValue: 0];
+		
+		[[self sentLabel] setHidden: NO];
+		
+		[NSAnimationContext beginGrouping];
+		
+		NSAnimationContext *animationContext = [NSAnimationContext currentContext];
+		
+		[animationContext setAllowsImplicitAnimation: YES];
+		
+		[animationContext setDuration: .2];
+		
+		[[NSAnimationContext currentContext] setTimingFunction: [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseOut]];
+		
+		[[[self sentLabel] animator] setAlphaValue: 1];
+		
+		[animationContext setCompletionHandler: ^{
+			
+			dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+				
+			[NSAnimationContext beginGrouping];
+			
+			[[NSAnimationContext currentContext] setDuration: .2];
+				
+				[[NSAnimationContext currentContext] setTimingFunction: [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseIn]];
+				
+				[[NSAnimationContext currentContext] setAllowsImplicitAnimation: YES];
+			
+			[[[self sentLabel] animator] setAlphaValue: 0];
+			
+			[NSAnimationContext endGrouping];
+				
+			});
+		}];
+		
+		[NSAnimationContext endGrouping];
+
 	}
 }
 
