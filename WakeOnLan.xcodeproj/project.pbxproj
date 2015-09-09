@@ -28,7 +28,7 @@
 		59AC018E1B9F04D800AB6E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AC018D1B9F04D800AB6E73 /* Assets.xcassets */; };
 		59AC01911B9F04D800AB6E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59AC018F1B9F04D800AB6E73 /* Main.storyboard */; };
 		59B529691B9F0F8100E6D275 /* UDPWOLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B529681B9F0F8100E6D275 /* UDPWOLServer.m */; settings = {ASSET_TAGS = (); }; };
-		9CF2B6FF6D770A1F2B91D6E0 /* Pods_WakeOnLan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0727353515D6CB718C2835C8 /* Pods_WakeOnLan.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		9CF2B6FF6D770A1F2B91D6E0 /* Pods_WakeOnLan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0727353515D6CB718C2835C8 /* Pods_WakeOnLan.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -660,7 +660,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Clement Padovani (W48L6Z4654)";
+				CODE_SIGN_IDENTITY = "Mac Developer: Clement Padovani (L4ZPL65Y4M)";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -679,7 +679,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "f1ba5e70-eeb0-4837-90b8-4ae494ead759";
+				PROVISIONING_PROFILE = "9401f391-1120-4e36-9d53-32b4ed984578";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -692,7 +692,7 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				CODE_SIGN_ENTITLEMENTS = WakeOnLan/WakeOnLan.entitlements;
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -702,7 +702,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.clement.padovani.WakeOnLan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f1ba5e70-eeb0-4837-90b8-4ae494ead759";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -714,8 +714,8 @@
 				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_X86_VECTOR_INSTRUCTIONS = default;
 				CODE_SIGN_ENTITLEMENTS = WakeOnLan/WakeOnLan.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application: Clement Padovani (W48L6Z4654)";
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application: Clement Padovani (W48L6Z4654)";
+				CODE_SIGN_IDENTITY = "Developer ID Application: Clement Padovani (W48L6Z4654)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: Clement Padovani (W48L6Z4654)";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PREFIX_HEADER = "WakeOnLan/Supporting Files/WOLPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/WakeOnLan/Supporting Files/Info.plist";
@@ -723,7 +723,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_BUNDLE_IDENTIFIER = com.clement.padovani.WakeOnLan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "f1ba5e70-eeb0-4837-90b8-4ae494ead759";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
