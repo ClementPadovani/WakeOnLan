@@ -14,7 +14,8 @@
 #import "WOLAppDelegate.h"
 #import "WOLHistoryManager.h"
 
-#import <SNRFetchedResultsController/SNRFetchedResultsController.h>
+@import SNRFetchedResultsController;
+
 #import "WOLHistoryItem.h"
 #import "WOLViewController.h"
 
@@ -34,8 +35,6 @@
 
 - (void) applicationDidFinishLaunching:(nonnull NSNotification *)notification
 {
-	CPLog(@"token: %@", [[NSFileManager defaultManager] ubiquityIdentityToken]);
-	
 	#ifdef RELEASE
 		[[NSUserDefaults standardUserDefaults] registerDefaults:@{ @"NSApplicationCrashOnExceptions": @YES }];
 	

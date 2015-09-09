@@ -1,5 +1,7 @@
+CODE_SIGN_IDENTITY =
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" "${PODS_ROOT}/Headers/Public/Crashlytics-OSX" "${PODS_ROOT}/Headers/Public/Fabric-OSX" "${PODS_ROOT}/Headers/Public/SNRFetchedResultsController"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/CocoaAsyncSocket" -isystem "${PODS_ROOT}/Headers/Public/Crashlytics-OSX" -isystem "${PODS_ROOT}/Headers/Public/Fabric-OSX" -isystem "${PODS_ROOT}/Headers/Public/SNRFetchedResultsController"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"SNRFetchedResultsController"
+LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/../Frameworks' '@loader_path/Frameworks'
+OTHER_CFLAGS = $(inherited) -iquote "$CONFIGURATION_BUILD_DIR/SNRFetchedResultsController.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -framework "SNRFetchedResultsController"
+PODS_FRAMEWORK_BUILD_PATH = $(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/Pods-WakeOnLan
 PODS_ROOT = ${SRCROOT}/Pods

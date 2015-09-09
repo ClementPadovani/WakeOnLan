@@ -2,6 +2,10 @@
 
 platform :osx, '10.9'
 
+use_frameworks!
+
+xcodeproj 'WakeOnLan'
+
 target 'WakeOnLan' do
 
 pod 'Fabric-OSX', :configurations => ['Release']
