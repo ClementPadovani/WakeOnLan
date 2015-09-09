@@ -28,7 +28,7 @@
 		59AC018E1B9F04D800AB6E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AC018D1B9F04D800AB6E73 /* Assets.xcassets */; };
 		59AC01911B9F04D800AB6E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59AC018F1B9F04D800AB6E73 /* Main.storyboard */; };
 		59B529691B9F0F8100E6D275 /* UDPWOLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B529681B9F0F8100E6D275 /* UDPWOLServer.m */; settings = {ASSET_TAGS = (); }; };
-		9CF2B6FF6D770A1F2B91D6E0 /* Pods_WakeOnLan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0727353515D6CB718C2835C8 /* Pods_WakeOnLan.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		9CF2B6FF6D770A1F2B91D6E0 /* Pods_WakeOnLan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0727353515D6CB718C2835C8 /* Pods_WakeOnLan.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
