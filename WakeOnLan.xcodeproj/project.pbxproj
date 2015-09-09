@@ -15,6 +15,7 @@
 		598DDBD11B6A7F20009052F6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 598DDBD01B6A7F20009052F6 /* main.m */; };
 		598DDBD61B6A7F20009052F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBD51B6A7F20009052F6 /* Assets.xcassets */; };
 		598DDBD91B6A7F20009052F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598DDBD71B6A7F20009052F6 /* Main.storyboard */; };
+		59998CFD1BA04BE700349F3D /* WOLHistoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 59998CFC1BA04BE700349F3D /* WOLHistoryManager.m */; settings = {ASSET_TAGS = (); }; };
 		59A92E441B9F3ACF001B1985 /* UDPWOLActualTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A92E431B9F3ACF001B1985 /* UDPWOLActualTests.m */; };
 		59A92E4B1B9F3B42001B1985 /* WOLwol.c in Sources */ = {isa = PBXBuildFile; fileRef = 592C282B1B6BB5BA009DE88D /* WOLwol.c */; settings = {ASSET_TAGS = (); }; };
 		59AC01861B9F04D800AB6E73 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 59AC01851B9F04D800AB6E73 /* AppDelegate.m */; };
@@ -58,6 +59,8 @@
 		598DDBD81B6A7F20009052F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		598DDBDA1B6A7F20009052F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		598DDBE01B6A7FC1009052F6 /* WakeOnLan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = WakeOnLan.entitlements; sourceTree = "<group>"; };
+		59998CFB1BA04BE700349F3D /* WOLHistoryManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLHistoryManager.h; sourceTree = "<group>"; };
+		59998CFC1BA04BE700349F3D /* WOLHistoryManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WOLHistoryManager.m; sourceTree = "<group>"; };
 		59A92E411B9F3ACF001B1985 /* UDPWOLActualTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UDPWOLActualTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		59A92E431B9F3ACF001B1985 /* UDPWOLActualTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UDPWOLActualTests.m; sourceTree = "<group>"; };
 		59A92E451B9F3ACF001B1985 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -160,11 +163,12 @@
 		598DDBCB1B6A7F20009052F6 /* WakeOnLan */ = {
 			isa = PBXGroup;
 			children = (
-				59441CF21B9F0047006AAF11 /* Formatter */,
-				598DDBCF1B6A7F20009052F6 /* Supporting Files */,
-				59441CF11B9F0041006AAF11 /* Views */,
 				592C282E1B6BB627009DE88D /* WOLAppDelegate.h */,
 				592C282F1B6BB627009DE88D /* WOLAppDelegate.m */,
+				59998CFE1BA04BEA00349F3D /* History Manager */,
+				59441CF21B9F0047006AAF11 /* Formatter */,
+				59441CF11B9F0041006AAF11 /* Views */,
+				598DDBCF1B6A7F20009052F6 /* Supporting Files */,
 			);
 			path = WakeOnLan;
 			sourceTree = "<group>";
@@ -181,6 +185,15 @@
 				598DDBD01B6A7F20009052F6 /* main.m */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		59998CFE1BA04BEA00349F3D /* History Manager */ = {
+			isa = PBXGroup;
+			children = (
+				59998CFB1BA04BE700349F3D /* WOLHistoryManager.h */,
+				59998CFC1BA04BE700349F3D /* WOLHistoryManager.m */,
+			);
+			name = "History Manager";
 			sourceTree = "<group>";
 		};
 		59A92E421B9F3ACF001B1985 /* UDPWOLActualTests */ = {
@@ -497,6 +510,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				592C28361B6BBFBD009DE88D /* WOLMACAddressFormatter.m in Sources */,
+				59998CFD1BA04BE700349F3D /* WOLHistoryManager.m in Sources */,
 				592C28301B6BB627009DE88D /* WOLAppDelegate.m in Sources */,
 				592C282D1B6BB5BA009DE88D /* WOLwol.c in Sources */,
 				598DDBD11B6A7F20009052F6 /* main.m in Sources */,
