@@ -9,7 +9,7 @@
 #import "WOLMACAddressFormatter.h"
 @import AppKit;
 
-static const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
+const NSUInteger kWOLMACAddressFormatterMACAddressLength = 17;
 
 @interface WOLMACAddressFormatter ()
 

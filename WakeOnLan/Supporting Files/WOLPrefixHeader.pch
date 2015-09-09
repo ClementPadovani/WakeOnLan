@@ -9,6 +9,10 @@
 #ifndef WOLPrefixHeader_pch
 #define WOLPrefixHeader_pch
 
+@import Foundation;
+
+extern const NSUInteger kWOLMACAddressFormatterMACAddressLength;
+
 #ifdef RELEASE
 
 @import Fabric;
