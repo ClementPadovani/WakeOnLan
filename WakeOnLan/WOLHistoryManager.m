@@ -10,9 +10,15 @@
 
 @import CoreData;
 
+@import AppKit;
+
 @interface WOLHistoryManager ()
 
+@property (nonatomic, strong) NSManagedObjectModel *model;
 
+@property (nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
+
+@property (nonatomic, strong) NSManagedObjectContext *mainContext;
 
 @end
 
@@ -30,16 +36,87 @@
 	return _sharedManager;
 }
 
-- (instancetype) init
+- (NSManagedObjectModel *) model
 {
-	self = [super init];
-	
-	if (self)
+	if (!_model)
 	{
+		NSURL *modelURL = [[NSBundle mainBundle] URLForResource: @"WOLHistory" withExtension: @"momd"];
 		
+		NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL: modelURL];
+		
+		_model = model;
 	}
 	
-	return self;
+	return _model;
+}
+
+- (NSDictionary *) storeOptions
+{
+	return @{NSPersistentStoreUbiquitousContentNameKey : @"History"};
+}
+
+- (NSPersistentStoreCoordinator *) persistentStoreCoordinator
+{
+	if (!_persistentStoreCoordinator)
+	{
+		NSPersistentStoreCoordinator *persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel: [self model]];
+		
+		NSError *storeError = nil;
+		
+		NSURL *storeURL = [self applicationDocumentsDirectory];
+		
+		storeURL = [storeURL URLByAppendingPathComponent: @"history"];
+		
+		storeURL = [storeURL URLByAppendingPathExtension: @"sqlite"];
+		
+		NSPersistentStore *persistentStore = [persistentStoreCoordinator addPersistentStoreWithType: NSSQLiteStoreType
+																	   configuration: nil
+																			   URL: storeURL
+																		    options: [self storeOptions]
+																			 error: &storeError];
+		
+		if (!persistentStore ||
+		    storeError)
+		{
+			CPLog(@"store error: %@", storeError);
+			
+			if (![NSApp presentError: storeError])
+				CPLog(@"couldn't present error");
+		}
+		
+		if ([persistentStoreCoordinator respondsToSelector: @selector(setName:)])
+		{
+			[persistentStoreCoordinator setName: @"Persistent Store Coordinator"];
+		}
+		
+		_persistentStoreCoordinator = persistentStoreCoordinator;
+	}
+	
+	return _persistentStoreCoordinator;
+}
+
+- (NSManagedObjectContext *) mainContext
+{
+	if (!_mainContext)
+	{
+		NSManagedObjectContext *mainContext = [[NSManagedObjectContext alloc] initWithConcurrencyType: NSMainQueueConcurrencyType];
+		
+		if ([mainContext respondsToSelector: @selector(setName:)])
+		{
+			[mainContext setName: @"Main Context"];
+		}
+		
+		[mainContext setPersistentStoreCoordinator: [self persistentStoreCoordinator]];
+		
+		_mainContext = mainContext;
+	}
+	
+	return _mainContext;
+}
+
+- (NSURL *) applicationDocumentsDirectory
+{
+	return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
 
 @end
