@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface WOLHistoryItem (CoreDataProperties)
 
-@property (nonatomic) NSTimeInterval lastUsedDate;
+@property (nullable, nonatomic, retain) NSDate *lastUsedDate;
 @property (nullable, nonatomic, retain) NSString *macAddress;
 
 @end
