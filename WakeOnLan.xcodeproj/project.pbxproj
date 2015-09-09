@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30B4D98517553BA07BEAED55 /* Pods_UDPWOLTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2481ABA7B7CA71E5E0E97F2A /* Pods_UDPWOLTest.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		592C282D1B6BB5BA009DE88D /* WOLwol.c in Sources */ = {isa = PBXBuildFile; fileRef = 592C282B1B6BB5BA009DE88D /* WOLwol.c */; };
 		592C28301B6BB627009DE88D /* WOLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C282F1B6BB627009DE88D /* WOLAppDelegate.m */; };
 		592C28331B6BB679009DE88D /* WOLViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 592C28321B6BB679009DE88D /* WOLViewController.m */; };
@@ -28,7 +27,8 @@
 		59AC018E1B9F04D800AB6E73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59AC018D1B9F04D800AB6E73 /* Assets.xcassets */; };
 		59AC01911B9F04D800AB6E73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59AC018F1B9F04D800AB6E73 /* Main.storyboard */; };
 		59B529691B9F0F8100E6D275 /* UDPWOLServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 59B529681B9F0F8100E6D275 /* UDPWOLServer.m */; settings = {ASSET_TAGS = (); }; };
-		9CF2B6FF6D770A1F2B91D6E0 /* Pods_WakeOnLan.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0727353515D6CB718C2835C8 /* Pods_WakeOnLan.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		68BD94AD34548C72877A9D34 /* libPods-UDPWOLTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 822415E43D58E0BF926ABCE0 /* libPods-UDPWOLTest.a */; };
+		75DCF4F30713D690439D9B82 /* libPods-WakeOnLan.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 95C5EA1AA7CE136AEFF59DA9 /* libPods-WakeOnLan.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0727353515D6CB718C2835C8 /* Pods_WakeOnLan.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WakeOnLan.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F379F57538138F64ABCCD6F /* Pods-UDPWOLTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPWOLTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UDPWOLTest/Pods-UDPWOLTest.debug.xcconfig"; sourceTree = "<group>"; };
 		18812D1C69E8ACE66DDDA2A2 /* libPods-UDPWOLTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UDPWOLTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A6D9C82F3DFC2C179DC3602 /* Pods-UDPWOLTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UDPWOLTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-UDPWOLTest/Pods-UDPWOLTest.release.xcconfig"; sourceTree = "<group>"; };
-		2481ABA7B7CA71E5E0E97F2A /* Pods_UDPWOLTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UDPWOLTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		592872161B9F417C00E59298 /* UDPWOLTestPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UDPWOLTestPrefixHeader.pch; sourceTree = "<group>"; };
 		592C282B1B6BB5BA009DE88D /* WOLwol.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = WOLwol.c; sourceTree = "<group>"; };
 		592C282C1B6BB5BA009DE88D /* WOLwol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WOLwol.h; sourceTree = "<group>"; };
@@ -88,6 +86,8 @@
 		59B529681B9F0F8100E6D275 /* UDPWOLServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDPWOLServer.m; sourceTree = "<group>"; };
 		59DC8F2C1B9EFF4500213180 /* WOLPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WOLPrefixHeader.pch; sourceTree = "<group>"; };
 		6581E4BE60B9D646E8D4D3A6 /* libPods-TCPTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TCPTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		822415E43D58E0BF926ABCE0 /* libPods-UDPWOLTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UDPWOLTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		95C5EA1AA7CE136AEFF59DA9 /* libPods-WakeOnLan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WakeOnLan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C386812AA1F7CEB81AFCBAD0 /* Pods-WakeOnLan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeOnLan.release.xcconfig"; path = "Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan.release.xcconfig"; sourceTree = "<group>"; };
 		C56E21A69DEC95B91B95A202 /* Pods-WakeOnLan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WakeOnLan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WakeOnLan/Pods-WakeOnLan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CF2B6FF6D770A1F2B91D6E0 /* Pods_WakeOnLan.framework in Frameworks */,
+				75DCF4F30713D690439D9B82 /* libPods-WakeOnLan.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30B4D98517553BA07BEAED55 /* Pods_UDPWOLTest.framework in Frameworks */,
+				68BD94AD34548C72877A9D34 /* libPods-UDPWOLTest.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,8 +125,8 @@
 				5961CBC51B9F314300D539A8 /* XCTest.framework */,
 				6581E4BE60B9D646E8D4D3A6 /* libPods-TCPTest.a */,
 				18812D1C69E8ACE66DDDA2A2 /* libPods-UDPWOLTestTests.a */,
-				0727353515D6CB718C2835C8 /* Pods_WakeOnLan.framework */,
-				2481ABA7B7CA71E5E0E97F2A /* Pods_UDPWOLTest.framework */,
+				822415E43D58E0BF926ABCE0 /* libPods-UDPWOLTest.a */,
+				95C5EA1AA7CE136AEFF59DA9 /* libPods-WakeOnLan.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
