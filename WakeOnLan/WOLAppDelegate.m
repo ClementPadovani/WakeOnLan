@@ -16,6 +16,7 @@
 
 #import <SNRFetchedResultsController/SNRFetchedResultsController.h>
 #import "WOLHistoryItem.h"
+#import "WOLViewController.h"
 
 
 @interface WOLAppDelegate () <SNRFetchedResultsControllerDelegate>
@@ -102,7 +103,9 @@
 	
 	NSParameterAssert([historyMenuItem isKindOfClass: [NSMenuItem class]]);
 	
+	NSString *historyMACAddressString = [historyMenuItem title];
 	
+	[[self mainViewController] doWakeUpClientWithMACAddress: historyMACAddressString];
 }
 
 - (BOOL) applicationShouldTerminateAfterLastWindowClosed: (nonnull NSApplication *) sender
