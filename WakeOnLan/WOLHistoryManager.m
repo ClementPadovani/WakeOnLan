@@ -135,6 +135,49 @@
 	return _importContext;
 }
 
+- (void) doPerformSave
+{
+	NSManagedObjectContext *importContext = [self importContext];
+	
+	NSManagedObjectContext *mainContext = [self mainContext];
+	
+	[importContext performBlock: ^{
+		
+		NSError *importSaveError = nil;
+		
+		if (![importContext save: &importSaveError])
+		{
+			CPLog(@"import save error: %@", importSaveError);
+			
+			dispatch_async(dispatch_get_main_queue(), ^{
+				
+				[NSApp presentError: importSaveError];
+				
+			});
+		}
+		else
+		{
+			[mainContext performBlock: ^{
+				
+				NSError *mainSaveError = nil;
+				
+				if (![mainContext save: &mainSaveError])
+				{
+					CPLog(@"main save error: %@", mainSaveError);
+					
+					dispatch_async(dispatch_get_main_queue(), ^{
+						
+						[NSApp presentError: mainSaveError];
+						
+					});
+				}
+				
+			}];
+		}
+		
+	}];
+}
+
 - (NSURL *) applicationDocumentsDirectory
 {
 	return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
